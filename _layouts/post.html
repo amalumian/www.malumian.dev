@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<section class="post-page">
+  {% include breadcrumbs.html %}
+  <article class="post">
+    <h1 class="post__heading">{{ page.title }}</h1>
+    <p class="post__info">
+      <a class="post__author" href="/about/">{{ site.author }}</a>
+      | {{ page.date | date: "%B %-d, %Y" }} •
+      <span class="post__reading-time">{% include reading-time.html %}</span>
+    </p>
+    <img class="post__image" src="{{ page.image }}" alt="Post cover" />
+    {% include share-buttons.html %}
+    <section class="post__content">{{ content }}</section>
+  </article>
+  {% if page.previous.url or page.next.url %}
+  <section class="post-page__navigation">
+    {% if page.previous.url %}
+    <a class="post-page__prev" href="{{page.previous.url}}"
+      >&#8592; {{page.previous.title}}</a
+    >
+    {% endif %}
+    {% if page.next.url %}
+    <a class="post-page__next" href="{{page.next.url}}"
+      >{{page.next.title}} &#8594;
+    </a>
+    {% endif %}
+  </section>
+  {% endif %}
+</section>

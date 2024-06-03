@@ -1,0 +1,46 @@
+# plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+# permalink
+permalink: /:title/
+
+# excerpt
+excerpt_separator: <!--more-->
+
+# paginate
+paginate: 10;
+paginate_path: '/page/:num/'
+
+# sitemap
+defaults:
+  - scope:
+      path: 'pdf'
+    values:
+      sitemap: false
+
+# syntax
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
+
+# SEO
+author: Arthur Malumian
+description: This is the blog of Arthur Malumian, a programmer who posts about software development and more. He shares about the books he's reading, the movies he's watching, and the trips he's taking.
+url: https://www.amalumian.com
+webmaster_verifications:
+  google: 1234
+  yandex: 1234
+
+#exclude
+exclude:
+  - README.md
+  - LICENSE.txt
+  - Gemfile.lock
+  - Gemfile

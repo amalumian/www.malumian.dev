@@ -1,0 +1,85 @@
+---
+layout: default
+title: Blog
+image: /assets/images/about/arthur-malumian.jpg
+---
+
+<section class="blog">
+  <h1 class="blog__heading">
+    Blog<span class="blog__total-posts" title="Total posts"
+      >{{ paginator.total_posts }}</span
+    >
+  </h1>
+
+  <section class="blog__post-list">
+    {% for post in paginator.posts %}
+    <article class="post">
+      <a class="post__link" href="{{ post.url }}">
+        <img class="post__image" src="{{ post.image }}" alt="Post cover" />
+        <div class="post__content">
+          <h2 class="post__heading">{{ post.title }}</h2>
+          <p class="post__info">{{ post.date | date: "%B %-d, %Y" }}</p>
+          <p class="post__excerpt">
+            {{ post.excerpt | strip_html | truncatewords: 20 }}
+          </p>
+        </div>
+      </a>
+    </article>
+    {% endfor %}
+  </section>
+
+  <section class="pagination">
+    <section class="pagination__side">
+      {% if paginator.previous_page %}
+      <a class="pagination__link" href="/" aria-label="First page">
+        &#8676; First
+      </a>
+      <a
+        class="pagination__link"
+        href="{{ paginator.previous_page_path }}"
+        aria-label="Previous page"
+      >
+        &#8592; Previous
+      </a>
+      {% else %}
+      <div class="pagination__link_disabled" aria-label="Disabled first page">
+        &#8676; First
+      </div>
+      <div class="pagination__link_disabled" aria-label="Disabled previous page">
+        &#8592; Previous
+      </div>
+      {% endif %}
+    </section>
+    <section class="pagination__side pagination__side_middle">
+      <div class="pagination__page-number">
+        {{ paginator.page }} of {{ paginator.total_pages }}
+      </div>
+    </section>
+    <section class="pagination__side">
+      {% if paginator.next_page %}
+      <a
+        class="pagination__link"
+        href="{{ paginator.next_page_path }}"
+        aria-label="Next page"
+      >
+        Next &#8594;
+      </a>
+      <a
+        class="pagination__link"
+        href="/page/{{ paginator.total_pages }}"
+        aria-label="Last page"
+      >
+        Last &#8677;
+      </a>
+      {% else %}
+      <div class="pagination__link_disabled" aria-label="Disabled next page">
+        Next &#8594;
+      </div>
+      <div class="pagination__link_disabled" aria-label="Disabled last page">
+        Last &#8677;
+      </div>
+      {% endif %}
+    </section>
+  </section>
+</section>
+

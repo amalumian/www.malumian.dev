@@ -1,0 +1,26 @@
+.visually-hidden {
+  position: absolute !important;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.visually-hidden:focus {
+  position: unset !important;
+  outline: none;
+}
+
+.skip-link {
+  display: block;
+
+  font-family: $font-family-sans-serif-condensed;
+  color: $color-white;
+  text-decoration: none;
+  text-align: center;
+
+  background-color: $color-primary;
+
+  &:hover {
+    color: $color-white;
+    text-decoration: underline;
+  }
+}

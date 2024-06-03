@@ -1,0 +1,19 @@
+.breadcrumbs {
+  margin-top: 2rem;
+
+  font-family: $font-family-sans-serif-condensed;
+  font-size: $font-size-small;
+  color: $color-gray;
+  text-transform: uppercase;
+
+  &__link {
+    text-decoration: none;
+    color: $color-gray;
+    font-weight: normal;
+  }
+
+  &__current {
+    color: $color-primary;
+    font-weight: bold;
+  }
+}

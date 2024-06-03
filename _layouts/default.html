@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>
+      {% if paginator.previous_page %}
+        {{ page.title }} — Page {{ paginator.page }} | {{ site.author }}
+      {% else %}
+        {{ page.title }} | {{ site.author }}
+      {% endif %}
+    </title>
+
+    {% feed_meta %} {% seo title=false %}
+
+    <link rel="icon" href="/assets/images/favicons/favicon.ico" sizes="32x32" />
+    <link
+      rel="icon"
+      href="/assets/images/favicons/icon.svg"
+      type="image/svg+xml"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="/assets/images/favicons/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <script defer src="/assets/js/main.js"></script>
+  </head>
+  <body>
+    <a href="#content" class="skip-link visually-hidden">Skip to main content</a>
+    {% include header.html %}
+    <main id="content" class="main">{{ content }}</main>
+    {% include footer.html %}
+  </body>
+</html>

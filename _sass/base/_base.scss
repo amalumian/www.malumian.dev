@@ -1,0 +1,115 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-sizing: border-box;
+
+  font-family: $font-family-sans-serif;
+  line-height: $line-height-default;
+  font-size: $font-size-default;
+  color: $color-black;
+
+  background-color: $color-white;
+}
+
+ul,
+ol {
+  font-family: $font-family-serif;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 68rem;
+  width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+h1 {
+  margin: 2rem 0;
+
+  font-family: $font-family-sans-serif-condensed;
+  font-size: $font-size-heading-1;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: $font-size-heading-2;
+}
+
+h3 {
+  font-size: $font-size-heading-3;
+}
+
+p {
+  margin-bottom: 1rem;
+
+  font-family: $font-family-serif;
+}
+
+a {
+  color: $color-black;
+
+  &:hover {
+    color: $color-primary;
+  }
+
+  svg {
+    &:hover {
+      fill: $color-primary;
+    }
+  }
+}
+
+img {
+  width: 100%;
+}
+
+strong > em {
+  color: $color-primary;
+  font-weight: bold;
+  font-style: normal;
+}
+
+p > img {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+}
+
+svg {
+  fill: $color-black;
+}
+
+*:focus-visible {
+  outline: 0.2rem dashed $color-primary;
+}
+
+*:active {
+  outline: none;
+}
+
+*::selection {
+  background-color: rgba($color-primary, 0.4);
+}

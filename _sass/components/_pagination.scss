@@ -1,0 +1,40 @@
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  font-family: $font-family-sans-serif-condensed;
+  font-size: $font-size-medium;
+
+  &__side {
+    display: flex;
+    align-items: center;
+
+    &_middle {
+    }
+  }
+
+  &__page-number {
+  }
+
+  &__link {
+    display: block;
+
+    text-decoration: none;
+
+    &:first-child {
+      margin-right: 1rem;
+    }
+
+    &_disabled {
+      color: $color-gray;
+
+      cursor: not-allowed;
+
+      &:first-child {
+        margin-right: 1rem;
+      }
+    }
+  }
+}
