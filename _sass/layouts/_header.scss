@@ -99,6 +99,10 @@
     }
   }
 
+  &__input[type='search'] {
+    -webkit-appearance: none;
+  }
+
   &__button {
     display: block;
     border: $border;
