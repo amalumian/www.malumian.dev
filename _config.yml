@@ -41,6 +41,6 @@ webmaster_verifications:
 #exclude
 exclude:
   - README.md
-  - LICENSE.txt
+  - LICENSE
   - Gemfile.lock
   - Gemfile
