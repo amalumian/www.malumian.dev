@@ -6,7 +6,7 @@ Inspired by Computer Science.
 
 🌍 I'm based in Novosibirsk, Russia
 
-🖥️ See [my website](https://www.amalumian.dev)
+🖥️ See [my blog](https://www.amalumian.dev)
 
 📧 You can contact me at [amalumian@outlook.com](mailto:amalumian@outlook.com)
 
