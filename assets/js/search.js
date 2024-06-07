@@ -14,7 +14,7 @@
           '<h2 class="post__heading">' +
           item.title +
           '</h2>';
-        appendString += '<p class="post__info">' + item.date + '</p>';
+        appendString += '<p class="post__date">' + item.date + '</p>';
         appendString +=
           '<p class="post__excerpt">' +
           item.content.substring(0, 150).trimRight() +

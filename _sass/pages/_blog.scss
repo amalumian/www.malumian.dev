@@ -65,7 +65,7 @@
         }
       }
 
-      &__content {
+      &__details {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -81,7 +81,7 @@
         }
       }
 
-      &__info {
+      &__date {
         margin: 1rem 0;
 
         font-family: $font-family-sans-serif-condensed;
