@@ -13,7 +13,7 @@ layout: default
     </p>
     <img class="post__image" src="{{ page.image }}" alt="Post cover" />
     {% include share-buttons.html %}
-    <section class="post__content">{{ content }}</section>
+    {{ content }}
   </article>
   {% if page.previous.url or page.next.url %}
   <section class="post-page__navigation">
