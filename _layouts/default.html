@@ -24,6 +24,14 @@
 
     {% feed_meta %} {% seo title=false %}
 
+    {% if page.image %}
+    <meta name="twitter:image" content="https://www.amalumian.dev{{ page.image }}">
+    {% endif %}
+    <meta property="twitter:domain" content="amalumian.dev">
+    <meta property="twitter:url" content="https://www.amalumian.dev">
+    <meta name="twitter:title" content="{{ page.title }}">
+    <meta name="twitter:description" content="{{ page.description }}">
+
     <link rel="icon" href="/assets/images/favicons/favicon.ico" sizes="32x32" />
     <link
       rel="icon"
