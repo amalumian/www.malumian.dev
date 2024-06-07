@@ -17,7 +17,7 @@ Since I don't want to limit myself to one topic, my plan is to write about every
 
 ## Why
 
-The answer to the question will not be verbose. The main reason I decided to start blogging is simply that since we live in the age of technology and there is an opportunity to record my thoughts on the World Wide Web, it would be foolish to deny myself. Besides, don't you find it interesting to go back to your texts after a while and look at your past self as different from your present self?
+The answer to the question will not be verbose. The main reason I decided to start blogging is simply that since we live in the age of technology and there is an opportunity to record my thoughts on the World Wide Web, it would be foolish to deny myself. Besides, don't you find it interesting to go back to your texts after a while and look at your past self?
 
 Special thanks to the Jekyll team for the great tool that helped me create this blog.
 
