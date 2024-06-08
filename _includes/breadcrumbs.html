@@ -1,9 +1,9 @@
 <div class="breadcrumbs" id="breadcrumbs">
 {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
-<a class="breadcrumbs__link" href="/">Blog</a>
+<a class="breadcrumbs__link" href="/" aria-label="Blog page">Blog</a>
 {% for crumb in crumbs offset: 1 %}
   {% if forloop.last %}
-    > <span class="breadcrumbs__current">{{ page.title }}</span>
+    > <span role="text" class="breadcrumbs__current" aria-label="Current post: {{ page.title }}">{{ page.title }}</span>
   {% else %}
     / <a href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' | replace:'without-plugin/','without-plugins/' }}{% endfor %}">{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}</a>
   {% endif %}
