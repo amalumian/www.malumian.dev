@@ -16,6 +16,10 @@
   }
 
   &__page-number {
+    margin: 0;
+
+    font-family: $font-family-sans-serif-condensed;
+    font-size: $font-size-medium;
   }
 
   &__link {

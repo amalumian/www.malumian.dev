@@ -43,18 +43,18 @@ image: /assets/images/wide-logo.png
         &#8592; Previous
       </a>
       {% else %}
-      <div class="pagination__link_disabled" aria-label="Disabled first page">
+      <div class="pagination__link_disabled" aria-hidden="true">
         &#8676; First
       </div>
-      <div class="pagination__link_disabled" aria-label="Disabled previous page">
+      <div class="pagination__link_disabled" aria-hidden="true">
         &#8592; Previous
       </div>
       {% endif %}
     </section>
     <section class="pagination__side pagination__side_middle">
-      <div class="pagination__page-number">
+      <p class="pagination__page-number" aria-label="Pages">
         {{ paginator.page }} of {{ paginator.total_pages }}
-      </div>
+      </p>
     </section>
     <section class="pagination__side">
       {% if paginator.next_page %}
@@ -73,10 +73,10 @@ image: /assets/images/wide-logo.png
         Last &#8677;
       </a>
       {% else %}
-      <div class="pagination__link_disabled" aria-label="Disabled next page">
+      <div class="pagination__link_disabled" aria-hidden="true">
         Next &#8594;
       </div>
-      <div class="pagination__link_disabled" aria-label="Disabled last page">
+      <div class="pagination__link_disabled" aria-hidden="true">
         Last &#8677;
       </div>
       {% endif %}
