@@ -6,11 +6,11 @@ description: This post is an introduction by Arthur Malumian to his new personal
 
 Hello Internet, this is the first post on my new website. Honestly, this is my first post in my whole life. I think it is necessary to introduce myself first. In short, my name is Arthur Malumian, and I am a programmer. On this [page](/about/) you can find more information about me.
 
-Lately I have been thinking that it would be a good idea to do some writing, but the question is: where?
+Lately, I've been thinking that it would be a good idea to do some writing, but the question is: where?
 
 ## Where
 
-I thought: Maybe I should choose Twitter (X) or LinkedIn or Facebook. All these social media sites are really cool, but my feeling is that you have to have a certain theme on them. For example, take Twitter - shitposting about nothing, LinkedIn - everything clearly relevant to work, Facebook - I don't think it's worth explaining. I didn't want to put myself in a box and I thought it would be a good idea to create my own website, I am a programmer after all. But the question is: what to write about?
+I thought: Maybe I should choose Twitter (now called X) or LinkedIn or Facebook. All these social media sites are really cool, but my feeling is that you have to have a certain theme on them. For example, on Twitter — there's shitposting about nothing, LinkedIn — everything needs to be work-related, and on Facebook — well, I don't think it's worth explaining. I didn't want to put myself in a box and I thought it would be a good idea to create my own website, I am a programmer after all. But the question is: what to write about?
 
 ## What
 
