@@ -1,7 +1,7 @@
 ---
 layout: post
 image: /assets/images/posts/justice-for-all.jpg
-description: This post is a story about "life is life". People make mistakes, and there is nothing wrong with that. But admitting a mistake is a different matter. In this post, Arthur tells his story about making a mistake.
+description: This post is a story about life is life. People make mistakes, and there is nothing wrong with that. But admitting a mistake is a different matter. In this post, Arthur tells his story about making a mistake.
 ---
 
 I finally got my bachelor's degree in law. I can't even believe it. It seems that I had just entered the university, dreaming of a career as a civil lawyer, but the time passed so quickly and so much has changed in 4 years of study.
