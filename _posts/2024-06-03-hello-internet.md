@@ -10,7 +10,7 @@ Lately, I've been thinking that it would be a good idea to do some writing, but 
 
 ## Where
 
-I thought: Maybe I should choose Twitter (now called X) or LinkedIn or Facebook. All these social media sites are really great, but my feeling is that you have to have a certain theme on them. For example, on Twitter — there's shitposting about nothing, LinkedIn — everything needs to be work-related, and on Facebook — well, I don't think it's worth explaining. I didn't want to put myself in a box and I thought it would be a good idea to create my own website, I am a programmer after all. But the question is: what to write about?
+I thought: Maybe I should choose Twitter (now called X) or LinkedIn or Facebook. All these social media sites are really great, but my feeling is that you have to have a certain theme on them. For example, Twitter — there's shitposting about nothing, LinkedIn — everything needs to be work-related, and Facebook — well, I don't think it's worth explaining. I didn't want to put myself in a box and I thought it would be a good idea to create my own website, I am a programmer after all. But the question is: what to write about?
 
 ## What
 
