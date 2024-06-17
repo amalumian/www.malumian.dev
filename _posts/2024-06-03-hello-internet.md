@@ -1,6 +1,7 @@
 ---
 layout: post
 image: /assets/images/posts/the-great-gatsby.jpeg
+image-description: Leonardo DiCaprio in The Great Gatsby (2013)
 description: This post is an introduction by Arthur Malumian to his new personal website and blog. It's his very first blog post.
 ---
 

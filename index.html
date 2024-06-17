@@ -17,7 +17,7 @@ image: /assets/images/wide-logo.png
     {% for post in paginator.posts %}
     <article class="post">
       <a class="post__link" href="{{ post.url }}">
-        <img class="post__image" src="{{ post.image }}" alt="Post cover" />
+        <img class="post__image" src="{{ post.image }}" alt="Post cover: {{ post.image-description }}" />
         <div class="post__details">
           <h2 class="post__heading">{{ post.title }}</h2>
           <p class="post__date">{{ post.date | date: "%B %-d, %Y" }}</p>
