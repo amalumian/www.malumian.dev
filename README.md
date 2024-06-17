@@ -4,15 +4,11 @@ Inspired by Computer Science.
 
 ## Frontend Developer
 
-🌍 I'm based in Novosibirsk, Russia
-
-🖥️ See [my blog](https://www.amalumian.dev)
-
-📧 You can contact me at [amalumian@outlook.com](mailto:amalumian@outlook.com)
+💻 See [my blog](https://www.amalumian.dev)
 
 📄 My [resume.pdf](https://www.amalumian.dev/pdf/resume.pdf)
 
-🚀 I'm currently improving my knowledge in CS
+📧 You can contact me at [amalumian@outlook.com](mailto:amalumian@outlook.com)
 
 ## Skills
 
