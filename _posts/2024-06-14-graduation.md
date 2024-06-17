@@ -27,7 +27,7 @@ In my second year, I decided that civil law was something that I was interest
 
 ### Doubts
 
-The thing is, ever since high school, I've only studied what I'm interested in. For the first year of university, the illusion of interest persisted. And when I decided to study law in depth, I realized it wasn't my thing. I was reading civics textbooks and counting how many pages I had left, which isn't like me. To be honest, I was even disgusted.
+The thing is, ever since high school, I've only studied what I'm interested in. For the first year of university, the illusion of interest persisted. And when I decided to study law in depth, I realized it wasn't my thing. I was reading civil law textbooks and counting how many pages I had left, which isn't like me. To be honest, I was even disgusted.
 
 I finally realized that I didn't want to become a lawyer when I got to practice in the Arbitration Court (in Russia: a public authority that administers justice in the sphere of business and other economic activities). I had the opportunity to attend court hearings and see for myself real lawyers in action. It seems that here I could regain my interest by seeing real work, not theory from textbooks. But no, everything about this profession doesn't resonate with me at all. I told myself that I would never work as a lawyer.
 
