@@ -4,11 +4,11 @@ Inspired by Computer Science.
 
 ## Frontend Developer
 
-💻 See [my blog](https://www.amalumian.dev)
+💻 [Blog](https://www.amalumian.dev)
 
-📄 My [resume.pdf](https://www.amalumian.dev/pdf/resume.pdf)
+📄 [resume.pdf](https://www.amalumian.dev/pdf/resume.pdf)
 
-📧 You can contact me at [amalumian@outlook.com](mailto:amalumian@outlook.com)
+📧 [amalumian@outlook.com](mailto:amalumian@outlook.com)
 
 ## Skills
 
