@@ -14,6 +14,6 @@ I am a programmer based in Novosibirsk, Russia.
 
 [![My Skills](https://skillicons.dev/icons?i=react,redux,ts,js,sass,css,html,webpack,git&theme=light)](https://www.amalumian.dev/pdf/resume.pdf)
 
-## Links
+## Socials
 
 [![LinkedIn Link](https://skillicons.dev/icons?i=linkedin&theme=light)](https://linkedin.com/in/amalumian)
