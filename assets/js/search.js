@@ -17,7 +17,7 @@
         appendString += '<p class="post__date">' + item.date + '</p>';
         appendString +=
           '<p class="post__excerpt">' +
-          item.content.substring(0, 150).trimRight() +
+          item.content.substring(0, 180).trimRight() +
           '...</p></a></article>';
       }
 
