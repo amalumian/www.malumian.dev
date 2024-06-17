@@ -1,4 +1,4 @@
-# I'm Arthur Malumian
+# Arthur Malumian
 
 I am a programmer based in Novosibirsk, Russia.
 
