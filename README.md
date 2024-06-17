@@ -1,6 +1,6 @@
 # I'm Arthur Malumian
 
-Inspired by Computer Science.
+I am a programmer based in Novosibirsk, Russia.
 
 ## Frontend Developer
 
