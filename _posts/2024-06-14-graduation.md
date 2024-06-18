@@ -1,6 +1,6 @@
 ---
 layout: post
-image: /assets/images/posts/justice-for-all.jpg
+image: /assets/images/posts/justice-for-all.webp
 image-description: Al Pacino in And Justice for All (1979)
 description: This post is a story about life is life. People make mistakes, and there is nothing wrong with that. But admitting a mistake is a different matter. In this post, Arthur tells his story about making a mistake.
 ---
