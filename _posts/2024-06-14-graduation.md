@@ -42,7 +42,7 @@ I did a lot of thinking and decided to give programming a second chance. I chose
 
 ### Realization
 
-You can imagine my surprise when I didn't realize how quickly the time flew when I was learning to program (remember when I was counting how many pages of the civics textbook were left). I realized that this was what I really wanted to do.
+You can imagine my surprise when I didn't realize how quickly the time flew when I was learning to program (remember when I was counting how many pages of the civil law textbook were left). I realized that this was what I really wanted to do.
 
 I was given additional confidence in my choice by an event that happened a year ago. I decided to take an offline course and met a guy who came to learn programming just like me. He then offered me a project job to develop a website for a construction company he worked for. It was the first real money I'd earned for coding, and I was incredibly happy.
 
