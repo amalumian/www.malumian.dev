@@ -102,12 +102,13 @@ svg {
   fill: $color-black;
 }
 
-*:focus-visible {
-  outline: 0.2rem dashed $color-primary;
+*:focus {
+  outline: none;
 }
 
-*:active {
-  outline: none;
+*:focus-visible {
+  outline: 0.2rem dashed $color-primary;
+  outline-offset: 0.2rem;
 }
 
 *::selection {
