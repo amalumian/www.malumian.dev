@@ -7,10 +7,15 @@
       margin-bottom: 2rem;
 
       &__link {
+        display:block;
         text-decoration: none;
 
         &:hover {
           color: $color-black;
+        }
+
+        &:active {
+          background-color: rgba($color-gray, 0.1);
         }
       }
 
@@ -21,6 +26,10 @@
         &:hover {
           text-decoration: underline;
           color: $color-primary;
+        }
+
+        &:active {
+          color: $color-primary-dark;
         }
       }
 

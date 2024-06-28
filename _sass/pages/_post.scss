@@ -39,6 +39,10 @@
       &:hover {
         color: $color-primary;
       }
+
+      &:active {
+        color: $color-primary-dark;
+      }
     }
 
     &__reading-time {
@@ -99,6 +103,10 @@
 
         &:hover {
           fill: $color-primary;
+        }
+
+        &:active {
+          fill: $color-primary-dark;
         }
       }
     }

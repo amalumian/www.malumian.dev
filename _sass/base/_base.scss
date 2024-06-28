@@ -74,9 +74,16 @@ a {
     color: $color-primary;
   }
 
+  &:active {
+    color: $color-primary-dark;
+  }
+
   svg {
     &:hover {
       fill: $color-primary;
+    }
+    &:active {
+      fill: $color-primary-dark;
     }
   }
 }
