@@ -115,7 +115,7 @@ svg {
 
 *:focus-visible {
   outline: 0.2rem dashed $color-primary;
-  outline-offset: 0.2rem;
+  outline-offset: 0.5rem;
 }
 
 *::selection {
