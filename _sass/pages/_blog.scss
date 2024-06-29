@@ -54,8 +54,10 @@
         }
 
         &:active {
-          background-color: $color-gray-light-1;
           color: $color-black;
+
+          background-color: $color-gray-light-1;
+          box-shadow: 0 0 0 0.5rem $color-gray-light-1;
         }
 
         @media only screen and (max-width: 430px) {
