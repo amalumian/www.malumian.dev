@@ -119,5 +119,5 @@ svg {
 }
 
 *::selection {
-  background-color: rgba($color-primary, 0.4);
+  background-color: $color-primary-light;
 }

@@ -121,13 +121,13 @@
     cursor: pointer;
 
     &:focus {
-      background-color: rgba($color-gray, 0.1);
+      background-color: $color-gray-light-1;
 
       outline: none;
     }
 
     &:active {
-      background-color: rgba($color-gray, 0.2);
+      background-color: $color-gray-light-2;
     }
 
     &-icon {
