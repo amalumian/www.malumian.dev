@@ -11,7 +11,16 @@ layout: default
       | {{ page.date | date: "%B %-d, %Y" }} •
       <span class="post__reading-time">{% include reading-time.html %}</span>
     </p>
-    <img class="post__image" src="{{ page.image }}" alt="Post cover: {{ page.image-description }}" />
+    <figure class="post__figure">
+      <img
+        class="post__image"
+        src="{{ page.image }}"
+        alt="Post cover: {{ page.image-description }}"
+      />
+      <figcaption class="post__figcaption">
+        {{ page.image-description }}
+      </figcaption>
+    </figure>
     {% include share-buttons.html %}
     {{ content }}
   </article>

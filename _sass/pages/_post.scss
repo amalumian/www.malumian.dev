@@ -48,13 +48,31 @@
     &__reading-time {
     }
 
+    &__figure {
+      position: relative;
+
+      margin-bottom: 1rem;
+    }
+
     &__image {
       display: block;
-      margin-bottom: 1rem;
 
       object-fit: cover;
       object-position: center;
       aspect-ratio: 16 / 9;
+    }
+
+    &__figcaption {
+      position: absolute;
+      bottom: 0.5rem;
+      left: 1rem;
+
+      font-family: $font-family-sans-serif-condensed;
+      font-size: $font-size-medium;
+      font-weight: bold;
+      color: $color-white;
+      -webkit-text-stroke: 0.05rem $color-black;
+      text-stroke: 0.05rem $color-black;
     }
   }
 
