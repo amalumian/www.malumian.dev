@@ -64,15 +64,15 @@
 
     &__figcaption {
       position: absolute;
-      bottom: 0.5rem;
+      bottom: 1rem;
       left: 1rem;
 
+      padding: 0 0.4rem;
+
       font-family: $font-family-sans-serif-condensed;
-      font-size: $font-size-medium;
-      font-weight: bold;
       color: $color-white;
-      -webkit-text-stroke: 0.05rem $color-black;
-      text-stroke: 0.05rem $color-black;
+
+      background-color: rgba($color-black, 0.5)
     }
   }
 
