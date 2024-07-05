@@ -1,7 +1,7 @@
 ---
 layout: post
 image: /assets/images/posts/2024-06-03-hello-internet/the-great-gatsby.webp
-image-alt: Leonardo DiCaprio in The Great Gatsby (2013)
+image-alt: Leonardo DiCaprio as Jay Gatsby in the movie The Great Gatsby (2013), elegantly dressed in a tuxedo, raises a glass with a confident smile against a backdrop of sparkling lights and a festive party scene.
 image-figcaption: The Great Gatsby (2013)
 description: This post is an introduction by Arthur Malumian to his new personal website and blog. It's his very first blog post.
 ---
