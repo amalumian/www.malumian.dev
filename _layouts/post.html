@@ -8,7 +8,7 @@ layout: default
     <h1 class="post__heading">{{ page.title }}</h1>
     <p class="post__details">
       <a class="post__author" href="/about/">{{ site.author }}</a>
-      | {{ page.date | date: "%B %-d, %Y" }} •
+      | <span class="post__date">{{ page.date | date: "%B %-d, %Y" }}</span> •
       <span class="post__reading-time">{% include reading-time.html %}</span>
     </p>
     <figure class="post__figure">
