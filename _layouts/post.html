@@ -6,11 +6,11 @@ layout: default
   {% include breadcrumbs.html %}
   <article class="post">
     <h1 class="post__heading">{{ page.title }}</h1>
-    <p class="post__details">
+    <section class="post__details">
       <a class="post__author" href="/about/">{{ site.author }}</a>
       | <span class="post__date">{{ page.date | date: "%B %-d, %Y" }}</span> •
       <span class="post__reading-time">{% include reading-time.html %}</span>
-    </p>
+    </section>
     <figure class="post__figure">
       <img
         class="post__image"
