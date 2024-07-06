@@ -120,17 +120,25 @@
     cursor: pointer;
 
     &:hover {
-      background-color: $color-gray-light-1;
+      .header__button-icon {
+        fill: $color-primary;
+      }
     }
 
     &:focus {
-      background-color: $color-gray-light-1;
-
       outline: none;
+
+      .header__button-icon {
+        fill: $color-primary;
+      }
     }
 
     &:active {
-      background-color: $color-gray-light-2;
+      .header__button-icon {
+        fill: $color-primary-dark;
+
+        transform: scale(0.9);
+      }
     }
 
     &-icon {
