@@ -89,6 +89,8 @@
     font-size: $font-size-medium;
 
     a {
+      width: 50%;
+
       text-decoration: none;
     }
   }
@@ -98,6 +100,8 @@
   }
   &__next {
     float: right;
+
+    text-align: right;
   }
 
   .share-post {
