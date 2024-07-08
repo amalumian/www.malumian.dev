@@ -11,7 +11,7 @@ layout: default
       • <span class="post__date">{{ page.date | date: "%B %-d, %Y" }}</span> •
       <span class="post__reading-time">{% include reading-time.html %}</span>
       •
-      <a class="post__comments" href="{{ page.url }}#disqus_thread">
+      <a class="post__comments" href="{{ site.url }}{{ page.url }}#disqus_thread">
         <noscript>Comments</noscript>
       </a>
     </section>
