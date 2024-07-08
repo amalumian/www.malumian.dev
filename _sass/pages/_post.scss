@@ -50,6 +50,18 @@
     &__date {
     }
 
+    &__comments {
+      color: $color-gray;
+
+      &:hover {
+        color: $color-primary;
+      }
+
+      &:active {
+        color: $color-primary-dark;
+      }
+    }
+
     &__reading-time {
     }
 
@@ -139,4 +151,8 @@
       }
     }
   }
+}
+
+#disqus_thread {
+  margin-bottom: 2rem;
 }

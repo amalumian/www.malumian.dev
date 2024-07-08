@@ -10,6 +10,10 @@ layout: default
       <a class="post__author" href="/about/">{{ site.author }}</a>
       • <span class="post__date">{{ page.date | date: "%B %-d, %Y" }}</span> •
       <span class="post__reading-time">{% include reading-time.html %}</span>
+      •
+      <a class="post__comments" href="{{ page.url }}#disqus_thread">
+        <noscript>Comments</noscript>
+      </a>
     </section>
     <figure class="post__figure">
       <img
@@ -46,4 +50,5 @@ layout: default
     {% endif %}
   </section>
   {% endif %}
+  {% include disqus.html %}
 </section>
