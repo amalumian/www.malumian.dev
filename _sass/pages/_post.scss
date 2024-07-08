@@ -116,6 +116,10 @@
     text-align: right;
   }
 
+  &__disqus {
+    margin-bottom: 2rem;
+  }
+
   .share-post {
     margin-bottom: 1rem;
 
@@ -151,8 +155,4 @@
       }
     }
   }
-}
-
-#disqus_thread {
-  margin-bottom: 2rem;
 }
