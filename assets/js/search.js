@@ -7,6 +7,7 @@
 
       for (var i = 0; i < results.length; i++) {
         var item = store[results[i].ref];
+
         appendString +=
           '<article class="post"><a class="post__link" href="' +
           item.url +
@@ -20,7 +21,6 @@
           item.content.substring(0, 180).trimRight() +
           '...</p></a></article>';
       }
-
       searchResults.innerHTML = appendString;
     } else {
       searchResults.innerHTML = '<p>No results found.</p>';
