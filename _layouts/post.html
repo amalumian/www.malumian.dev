@@ -7,13 +7,21 @@ layout: default
   <article class="post">
     <h1 class="post__heading">{{ page.title }}</h1>
     <section class="post__details">
-      <a class="post__author" href="/about/">{{ site.author }}</a>
-      • <span class="post__date">{{ page.date | date: "%B %-d, %Y" }}</span> •
-      <span class="post__reading-time">{% include reading-time.html %}</span>
-      •
-      <a class="post__comments" href="{{ site.url }}{{ page.url }}#disqus_thread">
-        comments
-      </a>
+      <ul class="post__list">
+        <li class="post__item">
+          <a class="post__link" href="/about/">{{ site.author }}</a>
+        </li>
+        <li class="post__item">{{ page.date | date: "%B %-d, %Y" }}</li>
+        <li class="post__item">{% include reading-time.html %}</li>
+        <li class="post__item">
+          <a
+            class="post__link"
+            href="{{ site.url }}{{ page.url }}#disqus_thread"
+          >
+            comments
+          </a>
+        </li>
+      </ul>
     </section>
     <figure class="post__figure">
       <img

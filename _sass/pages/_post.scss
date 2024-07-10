@@ -29,13 +29,41 @@
 
     &__details {
       margin-bottom: 1rem;
+    }
+
+    &__list {
+      display: flex;
+      margin-bottom: 0 !important;
 
       font-family: $font-family-sans-serif-condensed;
       font-size: $font-size-medium;
       color: $color-gray;
+
+      list-style: none;
     }
 
-    &__author {
+    &__item {
+      position: relative;
+
+      margin-left: 0 !important;
+
+      &:not(:last-child) {
+        margin-right: 1rem;
+
+        &:after {
+          content: '·';
+
+          position: absolute;
+
+          right: -0.5rem;
+          transform: translate(50%, 0);
+
+          color: $color-gray;
+        }
+      }
+    }
+
+    &__link {
       color: $color-gray;
 
       &:hover {
@@ -45,24 +73,6 @@
       &:active {
         color: $color-primary-dark;
       }
-    }
-
-    &__date {
-    }
-
-    &__comments {
-      color: $color-gray;
-
-      &:hover {
-        color: $color-primary;
-      }
-
-      &:active {
-        color: $color-primary-dark;
-      }
-    }
-
-    &__reading-time {
     }
 
     &__figure {
