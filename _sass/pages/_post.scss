@@ -46,20 +46,30 @@
     &__item {
       position: relative;
 
-      margin-left: 0 !important;
+      margin: 0 1rem 0 0 !important;
 
-      &:not(:last-child) {
-        margin-right: 1rem;
+      &::after {
+        content: '·';
 
-        &:after {
-          content: '·';
+        position: absolute;
 
-          position: absolute;
+        right: -0.5rem;
+        transform: translate(50%, 0);
 
-          right: -0.5rem;
-          transform: translate(50%, 0);
+        color: $color-gray;
+      }
 
-          color: $color-gray;
+      &:first-child {
+        &::after {
+          content: '|';
+        }
+      }
+
+      &:last-child {
+        margin-right: 0 !important;
+
+        &::after {
+          content: '';
         }
       }
     }
@@ -136,6 +146,8 @@
 
     &__list {
       display: flex;
+      margin-bottom: 0 !important;
+
       list-style: none;
     }
 
