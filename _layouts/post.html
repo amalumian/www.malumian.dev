@@ -11,7 +11,11 @@ layout: default
         <li class="post__item">
           <a class="post__link" href="/about/">{{ site.author }}</a>
         </li>
-        <li class="post__item">{{ page.date | date: "%B %-d, %Y" }}</li>
+        <li class="post__item">
+          <time datetime="{{ page.date | date: '%Y-%m-%d' }}">
+            {{ page.date | date: "%B %-d, %Y" }}
+          </time>
+        </li>
         <li class="post__item">{% include reading-time.html %}</li>
         <li class="post__item">
           <a
