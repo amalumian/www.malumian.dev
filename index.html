@@ -13,7 +13,7 @@ image: /assets/images/wide-logo.png
     >
   </h1>
 
-  <section class="blog__post-list">
+  <div class="blog__post-list">
     {% for post in paginator.posts %}
     <article class="post">
       <a class="post__link" href="{{ post.url }}">
@@ -37,7 +37,7 @@ image: /assets/images/wide-logo.png
       </a>
     </article>
     {% endfor %}
-  </section>
+  </div>
 
   <div class="pagination">
     <div class="pagination__side">
