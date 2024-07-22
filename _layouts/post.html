@@ -3,23 +3,23 @@ layout: default
 ---
 
 <section class="post-page">
-  {% include breadcrumbs.html %}
-  <article class="post">
-    <h1 class="post__heading">{{ page.title }}</h1>
-    <div class="post__details">
-      <ul class="post__list">
-        <li class="post__item">
-          <a class="post__link" href="/about/">{{ site.author }}</a>
+  <header class="post-page__header">
+    {% include breadcrumbs.html %}
+    <h1 class="post-page__heading">{{ page.title }}</h1>
+    <div class="post-page__details">
+      <ul class="post-page__list">
+        <li class="post-page__item">
+          <a class="post-page__link" href="/about/">{{ site.author }}</a>
         </li>
-        <li class="post__item">
+        <li class="post-page__item">
           <time datetime="{{ page.date | date: '%Y-%m-%d' }}">
             {{ page.date | date: "%B %-d, %Y" }}
           </time>
         </li>
-        <li class="post__item">{% include reading-time.html %}</li>
-        <li class="post__item">
+        <li class="post-page__item">{% include reading-time.html %}</li>
+        <li class="post-page__item">
           <a
-            class="post__link"
+            class="post-page__link"
             href="{{ site.url }}{{ page.url }}#disqus_thread"
           >
             comments
@@ -27,17 +27,19 @@ layout: default
         </li>
       </ul>
     </div>
-    <figure class="post__figure">
+    <figure class="post-page__figure">
       <img
-        class="post__image"
+        class="post-page__image"
         src="{{ page.image }}"
         alt="Post cover: {{ page.image-alt }}"
       >
-      <figcaption class="post__figcaption">
+      <figcaption class="post-page__figcaption">
         {{ page.image-figcaption }}
       </figcaption>
     </figure>
     {% include share-buttons.html %}
+  </header>
+  <article class="post">
     {{ content }}
   </article>
   {% if page.previous.url or page.next.url %}
