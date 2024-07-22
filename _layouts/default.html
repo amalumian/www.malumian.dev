@@ -10,10 +10,8 @@
 
       gtag('config', 'G-PC7DYHZBWY');
     </script>
-
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <title>
       {% if paginator.previous_page %}
         {{ page.title }} — Page {{ paginator.page }} | {{ site.author }}
@@ -21,9 +19,7 @@
         {{ page.title }} | {{ site.author }}
       {% endif %}
     </title>
-
     {% feed_meta %} {% seo title=false %}
-
     {% if page.image %}
     <meta name="twitter:image" content="{{ site.url }}{{ page.image }}">
     {% endif %}
@@ -31,20 +27,11 @@
     <meta property="twitter:url" content="{{site.url}}{{page.url}}">
     <meta name="twitter:title" content="{{ page.title }}">
     <meta name="twitter:description" content="{{ page.description }}">
-
-    <link rel="icon" href="/assets/images/favicons/favicon.ico" sizes="32x32" />
-    <link
-      rel="icon"
-      href="/assets/images/favicons/icon.svg"
-      type="image/svg+xml"
-    />
-    <link
-      rel="apple-touch-icon"
-      href="/assets/images/favicons/apple-touch-icon.png"
-    />
-    <link rel="manifest" href="/manifest.webmanifest" />
-
-    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="icon" href="/assets/images/favicons/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/assets/images/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/assets/images/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="stylesheet" href="/assets/css/main.css">
     <script defer src="/assets/js/main.js"></script>
   </head>
   <body>
