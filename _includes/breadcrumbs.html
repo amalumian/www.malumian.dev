@@ -4,7 +4,6 @@
   {% for crumb in crumbs offset: 1 %}
     {% if forloop.last %} >
     <span
-      role="text"
       class="breadcrumbs__current"
       aria-label="Current post: {{ page.title }}"
     >

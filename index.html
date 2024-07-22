@@ -5,7 +5,7 @@ description: This is the blog of Arthur Malumian, a programmer who posts about s
 image: /assets/images/wide-logo.png
 ---
 
-<section class="blog">
+<div class="blog">
   <h1 class="blog__heading">
     Blog<span class="blog__total-posts" title="Total posts"
       >{{ paginator.total_posts }}
@@ -39,8 +39,8 @@ image: /assets/images/wide-logo.png
     {% endfor %}
   </section>
 
-  <section class="pagination">
-    <section class="pagination__side">
+  <div class="pagination">
+    <div class="pagination__side">
       {% if paginator.previous_page %}
       <a class="pagination__link" href="/" aria-label="First page">
         &#8676; First
@@ -60,13 +60,13 @@ image: /assets/images/wide-logo.png
         &#8592; Previous
       </div>
       {% endif %}
-    </section>
-    <section class="pagination__side pagination__side_middle">
+    </div>
+    <div class="pagination__side pagination__side_middle">
       <p class="pagination__page-number" aria-label="Pages">
         {{ paginator.page }} of {{ paginator.total_pages }}
       </p>
-    </section>
-    <section class="pagination__side">
+    </div>
+    <div class="pagination__side">
       {% if paginator.next_page %}
       <a
         class="pagination__link"
@@ -90,6 +90,6 @@ image: /assets/images/wide-logo.png
         Last &#8677;
       </div>
       {% endif %}
-    </section>
-  </section>
-</section>
+    </div>
+  </div>
+</div>

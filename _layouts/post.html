@@ -6,7 +6,7 @@ layout: default
   {% include breadcrumbs.html %}
   <article class="post">
     <h1 class="post__heading">{{ page.title }}</h1>
-    <section class="post__details">
+    <div class="post__details">
       <ul class="post__list">
         <li class="post__item">
           <a class="post__link" href="/about/">{{ site.author }}</a>
@@ -26,7 +26,7 @@ layout: default
           </a>
         </li>
       </ul>
-    </section>
+    </div>
     <figure class="post__figure">
       <img
         class="post__image"
@@ -41,7 +41,7 @@ layout: default
     {{ content }}
   </article>
   {% if page.previous.url or page.next.url %}
-  <section class="post-page__navigation">
+  <div class="post-page__navigation">
     {% if page.previous.url %}
     <a
       class="post-page__prev"
@@ -60,7 +60,7 @@ layout: default
       {{ page.next.title }} &#8594;
     </a>
     {% endif %}
-  </section>
+  </div>
   {% endif %}
-  <section class="post-page__disqus">{% include disqus.html %}</section>
+  <div class="post-page__disqus">{% include disqus.html %}</div>
 </section>
