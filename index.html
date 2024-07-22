@@ -62,9 +62,9 @@ image: /assets/images/wide-logo.png
       {% endif %}
     </div>
     <div class="pagination__side pagination__side_middle">
-      <p class="pagination__page-number">
+      <span class="pagination__page-number">
         Page: {{ paginator.page }} of {{ paginator.total_pages }}
-      </p>
+      </span>
     </div>
     <div class="pagination__side">
       {% if paginator.next_page %}
