@@ -1,3 +1,6 @@
+# constants
+author_name: Arthur Malumian
+
 # plugins
 plugins:
   - jekyll-feed
@@ -31,8 +34,9 @@ kramdown:
   syntax_highlighter: rouge
 
 # SEO
-author: Arthur Malumian
 url: https://www.amalumian.dev
+author:
+  twitter: amalumian
 twitter:
   username: amalumian
 logo: /assets/images/wide-logo.png

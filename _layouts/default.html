@@ -12,11 +12,12 @@
     </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
+    <meta name="author" content="{{ site.author_name }}">
     <title>
       {% if paginator.previous_page %}
-        {{ page.title }} — Page {{ paginator.page }} | {{ site.author }}
+        {{ page.title }} — Page {{ paginator.page }} | {{ site.author_name }}
       {% else %}
-        {{ page.title }} | {{ site.author }}
+        {{ page.title }} | {{ site.author_name }}
       {% endif %}
     </title>
     {% feed_meta %} {% seo title=false %}
