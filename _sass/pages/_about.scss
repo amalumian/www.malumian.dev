@@ -21,8 +21,12 @@
 
   &__equipment-list {
     margin-left: 4rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 
     font-family: $font-family-sans-serif;
+  }
+
+  &__mac-setup {
+    margin-bottom: 2rem;
   }
 }
