@@ -3,7 +3,7 @@ layout: post
 image: /assets/images/posts/2024-06-14-graduation/justice-for-all.webp
 image-alt: Al Pacino as Arthur Kirkland in And Justice for All (1979) is being forcefully restrained by a police officer in a courtroom, his face showing intense emotion. The background is filled with blurred spectators, capturing the chaotic and dramatic atmosphere of the scene.
 image-figcaption: And Justice for All (1979)
-description: This post is a story about life is life. People make mistakes, and there is nothing wrong with that. But admitting a mistake is a different matter. In this post, Arthur Malumian tells his story about making a mistake.
+description: This post is a story about &quot;life is life&quot;. People make mistakes, and there is nothing wrong with that. But admitting a mistake is a different matter. In this post, Arthur Malumian tells his story about making a mistake.
 ---
 
 I finally got my bachelor's degree in law. I can't even believe it. It seems that I had just entered the university, dreaming of a career as a civil lawyer, but the time passed so quickly and so much has changed in 4 years of study.

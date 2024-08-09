@@ -1,10 +1,10 @@
 ---
 layout: post
 image: /assets/images/posts/2024-08-08-the-road-to-react/the-road-to-react.webp
-image-alt: The image shows an e-reader displaying the cover of the book "The Road to React" by Robin Wieruch.
+image-alt: The image shows an e-reader displaying the cover of the book &quot;The Road to React&quot; by Robin Wieruch.
 image-figcaption: The Road to React (2023)
 title: The Road to React
-description: In this post, Arthur Malumian discusses Robin Wieruch's book "The Road to React," highlighting it as an excellent resource for beginners learning React. The author emphasizes that while documentation is beneficial for experienced programmers, the book offers accessible explanations of complex concepts and practical examples, making it an ideal starting point for those encountering the library for the first time.
+description: In this post, Arthur Malumian discusses Robin Wieruch's book &quot;The Road to React&quot;, highlighting it as an excellent resource for beginners learning React. The author emphasizes that while documentation is beneficial for experienced programmers, the book offers accessible explanations of complex concepts and practical examples, making it an ideal starting point for those encountering the library for the first time.
 ---
 
 I recently read [The Road to React](https://www.roadtoreact.com/){:target="_blank"} by Robin Wieruch, and in this post I'd like to recommend it as probably the best React book for novices.
