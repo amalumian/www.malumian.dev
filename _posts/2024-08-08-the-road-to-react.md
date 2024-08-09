@@ -13,8 +13,6 @@ Experienced programmers often argue that technologies should be studied through 
 
 > Programming books are usually outdated soon after their release, but since this book is selfpublished, I can update it as needed whenever a new version of something related to this book gets released.
 
-I have to agree that in most cases it is worth studying the documentation. But this is more for experienced people. If a newbie encounters a library for the first time and has never seen anything like it before, he will most likely not understand what problem this library solves and why it is needed at all.
-
 While I agree that studying documentation is beneficial, especially for experienced programmers, beginners may struggle to understand the purpose of a library when encountering it for the first time. Therefore, a book can be an excellent starting point.
 
 Now, let's consider the pros of the book. First and foremost, Robin Wieruch is an exceptional teacher who explains complex concepts in simple language — a rare skill among programmers. The book includes detailed illustrations, code samples, and numerous footnotes to Robin's articles that provide in-depth coverage of React.
