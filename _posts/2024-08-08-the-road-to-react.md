@@ -7,7 +7,7 @@ title: The Road to React
 description: In this post, Arthur Malumian discusses Robin Wieruch's book &quot;The Road to React&quot;, highlighting it as an excellent resource for beginners learning React. The author emphasizes that while documentation is beneficial for experienced programmers, the book offers accessible explanations of complex concepts and practical examples, making it an ideal starting point for those encountering the library for the first time.
 ---
 
-I recently read [The Road to React](https://www.roadtoreact.com/){:target="\_blank"} by Robin Wieruch, and in this post I'd like to recommend it as probably the best React book for novices.
+I recently read [The Road to React](https://www.roadtoreact.com/){:target="_blank"} by Robin Wieruch, and in this post I'd like to recommend it as probably the best React book for novices.
 
 Experienced programmers often argue that technologies should be studied through documentation, noting that the process of editing and publishing books takes time, during which technologies can change significantly. However, this book is an exception, as it is self-published.
 
