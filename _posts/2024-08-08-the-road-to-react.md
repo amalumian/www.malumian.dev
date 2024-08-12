@@ -15,7 +15,7 @@ Experienced programmers often argue that technologies should be studied through 
 
 While I agree that studying documentation is beneficial, especially for experienced programmers, beginners may struggle to understand the purpose of a library when encountering it for the first time. Therefore, a book can be an excellent starting point.
 
-Now, let's consider the pros of the book. First and foremost, Robin Wieruch is an exceptional teacher who explains complex concepts in simple language — a rare skill among programmers. The book includes detailed illustrations, code samples, and numerous footnotes to Robin's articles that provide in-depth coverage of React.
+Now, let's consider the pros of the book. First and foremost, Robin Wieruch is an exceptional teacher who explains complex concepts in simple language — a rare skill among programmers. The book includes detailed illustrations, code samples, and numerous footnotes to [Robin's articles](https://www.robinwieruch.de/blog/){:target="_blank"} that provide in-depth coverage of React.
 
 Some reviews on Goodreads mention insufficient coverage of certain topics, but I believe this stems from readers not exploring the footnotes, which contain valuable information.
 
