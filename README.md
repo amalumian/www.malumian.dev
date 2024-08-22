@@ -14,4 +14,4 @@ I am a programmer who loves web technologies.
 
 ## Stats
 
-[![Arthur's GitHub stats](https://github-readme-stats.vercel.app/api?username=amalumian)](https://github.com/anuraghazra/github-readme-stats)
+[![Arthur Malumian's GitHub stats](https://github-readme-stats.vercel.app/api?username=amalumian)](https://github.com/anuraghazra/github-readme-stats)
