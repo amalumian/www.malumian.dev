@@ -8,7 +8,7 @@ I am a programmer based in Novosibirsk, Russia.
 
 📄 [resume.pdf](https://www.amalumian.dev/pdf/resume.pdf)
 
-📧 [amalumian@outlook.com](mailto:amalumian@outlook.com)
+📧 [amalumian.dev@gmail.com](mailto:amalumian.dev@gmail.com)
 
 ## Skills
 
