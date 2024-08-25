@@ -135,20 +135,25 @@
     font-family: $font-family-sans-serif-condensed;
     font-size: $font-size-medium;
 
-    a {
-      width: 50%;
+    .navigation {
+      &__block {
+        width: 50%;
 
-      text-decoration: none;
+        &_prev {
+          float: left;
+        }
+
+        &_next {
+          float: right;
+
+          text-align: right;
+        }
+      }
+
+      &__link {
+        text-decoration: none;
+      }
     }
-  }
-
-  &__prev {
-    float: left;
-  }
-  &__next {
-    float: right;
-
-    text-align: right;
   }
 
   &__disqus {
