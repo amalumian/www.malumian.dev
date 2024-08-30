@@ -10,7 +10,7 @@ I am a programmer who loves web technologies.
 
 ## Skills
 
-[![My Skills](https://skillicons.dev/icons?i=ts,react,redux,tailwind,bootstrap,materialui,sass,vitest,webpack,vite,js,css,html,git,vim&theme=light)](https://www.amalumian.dev/pdf/resume.pdf)
+[![My Skills](https://skillicons.dev/icons?i=ts,react,redux,tailwind,bootstrap,materialui,sass,vitest,webpack,vite,js,css,html,git,neovim,figma,apple&theme=light)](https://www.amalumian.dev/pdf/resume.pdf)
 
 ## Stats
 
