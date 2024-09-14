@@ -26,6 +26,9 @@ body {
 
 ul,
 ol {
+  margin-bottom: 1rem;
+  margin-left: 4rem;
+
   font-family: $font-family-serif;
 
   list-style: square;
@@ -84,6 +87,7 @@ a {
     &:hover {
       fill: $color-primary;
     }
+
     &:active {
       fill: $color-primary-dark;
     }

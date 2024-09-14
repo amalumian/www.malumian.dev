@@ -32,11 +32,11 @@
     }
   }
 
-  &__navigation {
-  }
+  &__navigation {}
 
   &__list {
     display: flex;
+    margin: 0;
 
     font-family: $font-family-sans-serif-condensed;
 

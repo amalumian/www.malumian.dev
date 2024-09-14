@@ -18,7 +18,7 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 0 !important;
+    margin: 0 !important;
 
     font-family: $font-family-sans-serif-condensed;
     font-size: $font-size-medium;
@@ -114,11 +114,6 @@
       font-family: font-family-serif;
     }
 
-    ul,
-    ol {
-      margin-bottom: 1rem;
-    }
-
     li {
       margin-left: 4rem;
     }
@@ -165,7 +160,7 @@
 
     &__list {
       display: flex;
-      margin-bottom: 0 !important;
+      margin: 0 !important;
 
       list-style: none;
     }
