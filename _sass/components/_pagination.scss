@@ -11,6 +11,14 @@
     display: flex;
     align-items: center;
 
+    &:first-child {
+      margin-right: 1rem;
+    }
+
+    &:last-child {
+      margin-left: 1rem;
+    }
+
     &_middle {
     }
   }
