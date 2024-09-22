@@ -9,6 +9,7 @@ description: This post is a story about &quot;life is life&quot;. People make mi
 I finally got my bachelor's degree in law. I can't even believe it. It seems that I had just entered the university, dreaming of a career as a civil lawyer, but the time passed so quickly and so much has changed in 4 years of study.
 
 In this post, I would like to tell my story of getting a higher education. Let's start with my high school days.
+
 ## School
 
 I was pretty good at school, but my favorite subject was history, which I spent most of my time studying in the last years of school. By the way, my eyesight got worse because I read a lot of history books on the screen of the iPhone SE before going to bed with no light in the room.
