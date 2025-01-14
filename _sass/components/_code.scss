@@ -8,6 +8,11 @@ p code {
   background-color: $background-color-code;
 }
 
+li code {
+  color: $color-code;
+  background-color: $background-color-code;
+}
+
 div.highlighter-rouge {
   overflow: auto;
 
