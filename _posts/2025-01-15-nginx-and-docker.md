@@ -1,7 +1,7 @@
 ---
 layout: post
 image: /assets/images/posts/2025-01-15-nginx-and-docker/silicon-valley.webp
-image-alt: Kumail Nanjiani as Dinesh Chugtai in Silicon Valley (2014–2019) working with six monitors arranged in two rows.
+image-alt: Kumail Nanjiani as Dinesh Chugtai in Silicon Valley (2014–2019) is working with six monitors arranged in two rows.
 image-figcaption: Silicon Valley (2014–2019)
 title: NGINX and Docker
 description: This article provides a comprehensive guide on how to configure Docker and NGINX for both frontend and backend applications in development and production environments.
