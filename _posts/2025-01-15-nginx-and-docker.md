@@ -88,7 +88,7 @@ For multi-container setups:
 - `docker compose up --build` – Builds and starts containers defined in `docker-compose.yml`.
 - `docker compose -f <docker-compose file name> up --build` – Uses a specific compose file for production. Add `-d` to run in the background.
 
-*Note: Replace values inside `< >` with the actual name, ID, or value as required.*
+*Note: Replace values inside `<>` with the actual name, ID, or value as required.*
 
 ### Backend
 
@@ -322,7 +322,7 @@ services:
       - ./frontend:/app # Mounting the local code directory into the container for development
       - /app/node_modules # Excluding node_modules from mounting to use container-specific dependencies
     depends_on:
-      - backend # Dependency on the `backend` service, ensuring the backend starts before the frontend
+      - backend # Dependency on the 'backend' service, ensuring the backend starts before the frontend
     networks:
       - app-network
 
@@ -364,7 +364,7 @@ services:
       - 3031:80
     restart: always # Always restart the container if it stops
     depends_on:
-      - backend # Dependency on the `backend` service, ensuring the backend starts before the frontend
+      - backend # Dependency on the 'backend' service, ensuring the backend starts before the frontend
     networks:
       - app-network
 
@@ -413,7 +413,7 @@ Here’s the NGINX directory structure:
 The following are commonly used `systemctl` commands to manage the NGINX service:
 
 ```bash
-`systemctl start|reload|restart|stop|status nginx
+systemctl start|reload|restart|stop|status nginx
 ```
 
 - `start`: Starts the NGINX service.
@@ -427,8 +427,6 @@ The following are commonly used `systemctl` commands to manage the NGINX servi
 This is the general configuration file for NGINX. Below is an example of a basic setup:
 
 ```conf
-nginx.conf
-
 user www-data;
 worker_processes auto;
 pid /run/nginx.pid;
@@ -490,7 +488,6 @@ http {
 
   include /etc/nginx/sites-enabled/*;
 }
-
 ```
 
 - The `http` block contains most of the configuration related to handling HTTP traffic, including settings for SSL, logging, compression (gzip), and proxy caching.
@@ -505,8 +502,6 @@ Here are two examples of NGINX configuration files. The first one is for a setup
 This configuration might be used when you're setting up a service without a domain.
 
 ```conf
-sites-available/default
-
 server {
   listen 8080;
 
@@ -547,8 +542,6 @@ args:
 This configuration is useful if you have specific domain (`example.com`) for your services.
 
 ```conf
-sites-available/example.com.conf
-
 server {
   listen 80;
   server_name api.example.com;
