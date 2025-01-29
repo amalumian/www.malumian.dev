@@ -64,29 +64,29 @@ application/
 
 The following commands are commonly used for managing Docker images and containers:
 
-- `docker image ls` – Lists available Docker images.
-- `docker ps` – Displays running containers.
-- `docker ps -a` – Lists all containers, including stopped ones.
+- `docker image ls` — Lists available Docker images.
+- `docker ps` — Displays running containers.
+- `docker ps -a` — Lists all containers, including stopped ones.
 
 To build and run images:
 
-- `docker build -t <image name> .` – Builds an image with a specific name.
-- `docker run -p <host-port:container-port> --name <container-name> <image name or ID>` – Runs a container with port mapping.
+- `docker build -t <image name> .` — Builds an image with a specific name.
+- `docker run -p <host-port:container-port> --name <container-name> <image name or ID>` — Runs a container with port mapping.
 
 Managing containers:
 
-- `docker stop <container name or ID>` – Stops a running container.
-- `docker start <container name or ID>` – Starts an existing container.
+- `docker stop <container name or ID>` — Stops a running container.
+- `docker start <container name or ID>` — Starts an existing container.
 
 Accessing container logs and shell:
 
-- `docker exec -it <container name or ID> /bin/sh` – Opens a shell in the running container.
-- `docker logs <container name or ID>` – Displays container logs.
+- `docker exec -it <container name or ID> /bin/sh` — Opens a shell in the running container.
+- `docker logs <container name or ID>` — Displays container logs.
 
 For multi-container setups:
 
-- `docker compose up --build` – Builds and starts containers defined in `docker-compose.yml`.
-- `docker compose -f <docker-compose file name> up --build` – Uses a specific compose file for production. Add `-d` to run in the background.
+- `docker compose up --build` — Builds and starts containers defined in `docker-compose.yml`.
+- `docker compose -f <docker-compose file name> up --build` — Uses a specific compose file for production. Add `-d` to run in the background.
 
 *Note: Replace values inside `<>` with the actual name, ID, or value as required.*
 
@@ -416,11 +416,11 @@ The following are commonly used `systemctl` commands to manage the NGINX servi
 systemctl start|reload|restart|stop|status nginx
 ```
 
-- `start`: Starts the NGINX service.
-- `reload`: Reloads the NGINX service to apply changes in configuration without restarting the service.
-- `restart`: Restarts the NGINX service, which is useful when changes are made that require a full restart.
-- `stop`: Stops the NGINX service.
-- `status`: Displays the current status of the NGINX service, including whether it's running or not.
+- `start` — Starts the NGINX service.
+- `reload` — Reloads the NGINX service to apply changes in configuration without restarting the service.
+- `restart` — Restarts the NGINX service, which is useful when changes are made that require a full restart.
+- `stop` — Stops the NGINX service.
+- `status` — Displays the current status of the NGINX service, including whether it's running or not.
 
 ### nginx.conf
 
