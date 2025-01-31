@@ -28,12 +28,12 @@ In this article, I will share how to configure and use Docker and NGINX for both
     - [docker-compose.dev.yml](#docker-composedevyml)
     - [docker-compose.prod.yml](#docker-composeprodyml)
 - [NGINX](#nginx)
-  - [Command Line Instructions](#command-line-instructions-1)
+  - [Command Line Instructions](#command-line-instructions-1)
   - [nginx.conf](#nginxconf-1)
   - [default or example.com.conf](#default-or-examplecomconf)
     - [default](#default)
     - [example.com.conf](#examplecomconf)
-- [Next Steps](#next-steps)
+- [Next Steps](#next-steps)
 - [Links](#links)
 
 ## Docker
@@ -64,38 +64,38 @@ application/
 
 The following commands are commonly used for managing Docker images and containers:
 
-- `docker image ls` — Lists available Docker images.
-- `docker ps` — Displays running containers.
-- `docker ps -a` — Lists all containers, including stopped ones.
+- `docker image ls` — Lists available Docker images.
+- `docker ps` — Displays running containers.
+- `docker ps -a` — Lists all containers, including stopped ones.
 
 To build and run images:
 
-- `docker build -t <image name> .` — Builds an image with a specific name.
-- `docker run -p <host-port:container-port> --name <container-name> <image name or ID>` — Runs a container with port mapping.
+- `docker build -t <image name> .` — Builds an image with a specific name.
+- `docker run -p <host-port:container-port> --name <container-name> <image name or ID>` — Runs a container with port mapping.
 
 Managing containers:
 
-- `docker stop <container name or ID>` — Stops a running container.
-- `docker start <container name or ID>` — Starts an existing container.
+- `docker stop <container name or ID>` — Stops a running container.
+- `docker start <container name or ID>` — Starts an existing container.
 
 Accessing container logs and shell:
 
-- `docker exec -it <container name or ID> /bin/sh` — Opens a shell in the running container.
-- `docker logs <container name or ID>` — Displays container logs.
+- `docker exec -it <container name or ID> /bin/sh` — Opens a shell in the running container.
+- `docker logs <container name or ID>` — Displays container logs.
 
 For multi-container setups:
 
-- `docker compose up --build` — Builds and starts containers defined in `docker-compose.yml`.
-- `docker compose -f <docker-compose file name> up --build` — Uses a specific compose file for production. Add `-d` to run in the background.
+- `docker compose up --build` — Builds and starts containers defined in `docker-compose.yml`.
+- `docker compose -f <docker-compose file name> up --build` — Uses a specific compose file for production. Add `-d` to run in the background.
 
-*Note: Replace values inside `<>` with the actual name, ID, or value as required.*
+*Note: Replace values inside `<>` with the actual name, ID, or value as required.*
 
 ### Backend
 
-The main difference between `Dockerfile.dev` and `Dockerfile.prod` lies in optimization for development and production stages. In `Dockerfile.prod`, we apply the following optimizations:
+The main difference between `Dockerfile.dev` and `Dockerfile.prod` lies in optimization for development and production stages. In `Dockerfile.prod`, we apply the following optimizations:
 
-1. The `--omit=dev` flag is used with `npm install` to exclude development dependencies, reducing the final image size.
-2. The startup command is changed from `npm run dev` to `npm run start`, ensuring the application runs in production mode. When using `npm run dev`, the application is started with `nodemon`, which automatically restarts the server upon detecting changes in the source code, making it ideal for development. In contrast, `npm run start` runs the application with the standard `node` command, suitable for production where frequent restarts are unnecessary, ensuring a more stable and efficient environment.
+1. The `--omit=dev` flag is used with `npm install` to exclude development dependencies, reducing the final image size.
+2. The startup command is changed from `npm run dev` to `npm run start`, ensuring the application runs in production mode. When using `npm run dev`, the application is started with `nodemon`, which automatically restarts the server upon detecting changes in the source code, making it ideal for development. In contrast, `npm run start` runs the application with the standard `node` command, suitable for production where frequent restarts are unnecessary, ensuring a more stable and efficient environment.
 
 #### Dockerfile.dev
 
@@ -134,7 +134,7 @@ CMD ["npm", "run", "start"]
 ```
 #### .env
 
-Make sure to create `.env` files in backend directory for both development and production.
+Make sure to create `.env` files in backend directory for both development and production.
 
 **Development (`.env.dev`)**:
 
@@ -152,7 +152,7 @@ PORT=3000
 
 #### .dockerignore
 
-A `.dockerignore` file helps to exclude unnecessary files from being copied into the Docker image, reducing its size and build time. Here's a typical `.dockerignore` file:
+A `.dockerignore` file helps to exclude unnecessary files from being copied into the Docker image, reducing its size and build time. Here's a typical `.dockerignore` file:
 
 ```plaintext
 node_modules
@@ -265,9 +265,9 @@ export default defineConfig({
 
 These parameters are necessary to ensure the correct functioning of a Vite application inside a Docker container:
 
-- `host: '0.0.0.0'` — makes the application accessible from outside the container.
-- `port: 5173` — explicitly specifies the port to be exposed.
-- `watch: { usePolling: true }` — solves file change detection issues inside the container, ensuring HMR works properly.
+- `host: '0.0.0.0'` — makes the application accessible from outside the container.
+- `port: 5173` — explicitly specifies the port to be exposed.
+- `watch: { usePolling: true }` — solves file change detection issues inside the container, ensuring HMR works properly.
 
 #### .dockerignore
 
@@ -285,7 +285,7 @@ Dockerfile
 
 ### docker-compose.yml
 
-Using `docker-compose.yml` simplifies managing multiple services, such as the backend and frontend, by defining them in a single file. Below are separate configurations for development and production.
+Using `docker-compose.yml` simplifies managing multiple services, such as the backend and frontend, by defining them in a single file. Below are separate configurations for development and production.
 
 #### docker-compose.dev.yml
 
@@ -373,7 +373,7 @@ networks:
     driver: bridge
 ```
 
-**Important clarification.** Notice that in the frontend development environment, I pass environment variables through `environment`, but in the production environment, I pass them through build arguments (`args`). Why is that?
+**Important clarification.** Notice that in the frontend development environment, I pass environment variables through `environment`, but in the production environment, I pass them through build arguments (`args`). Why is that?
 
 In development, environment variables can be dynamic and change their values while the application is running, which is convenient for frequent changes and testing.
 
@@ -381,9 +381,9 @@ In production, values are usually fixed during the build process, as the applica
 
 Here’s how it’s connected:
 
-For frontend applications built with tools like Vite, variables such as the API URL in my case need to be passed through `args` so they are embedded into the compiled code during the build stage. If you use `environment`, the variable will only be available after the container starts, which is more suitable for a development environment.
+For frontend applications built with tools like Vite, variables such as the API URL in my case need to be passed through `args` so they are embedded into the compiled code during the build stage. If you use `environment`, the variable will only be available after the container starts, which is more suitable for a development environment.
 
-Therefore, if you want the variable to be embedded in the static code during the build stage, it's better to use `args`.
+Therefore, if you want the variable to be embedded in the static code during the build stage, it's better to use `args`.
 
 ## NGINX
 
@@ -404,13 +404,13 @@ Here’s the NGINX directory structure:
 └── nginx.conf
 ```
 
-- `sites-available/` contains configuration files for each website or service you want to configure. These files are not active until linked to `sites-enabled/`.
-- `sites-enabled/` contains symbolic links (`ln -s`) to the configuration files in `sites-available/`, which make them active.
-- `nginx.conf` is the main configuration file where global settings and directives are specified.
+- `sites-available/` contains configuration files for each website or service you want to configure. These files are not active until linked to `sites-enabled/`.
+- `sites-enabled/` contains symbolic links (`ln -s`) to the configuration files in `sites-available/`, which make them active.
+- `nginx.conf` is the main configuration file where global settings and directives are specified.
 
 ### Command Line Instructions
 
-The following are commonly used `systemctl` commands to manage the NGINX service:
+The following are commonly used `systemctl` commands to manage the NGINX service:
 
 ```bash
 systemctl start|reload|restart|stop|status nginx
@@ -490,8 +490,8 @@ http {
 }
 ```
 
-- The `http` block contains most of the configuration related to handling HTTP traffic, including settings for SSL, logging, compression (gzip), and proxy caching.
-- The `include /etc/nginx/sites-enabled/*;` directive tells NGINX to include all configurations from `sites-enabled/`, effectively enabling the configurations for your sites.
+- The `http` block contains most of the configuration related to handling HTTP traffic, including settings for SSL, logging, compression (gzip), and proxy caching.
+- The `include /etc/nginx/sites-enabled/*;` directive tells NGINX to include all configurations from `sites-enabled/`, effectively enabling the configurations for your sites.
 
 ### default or example.com.conf
 
@@ -530,7 +530,7 @@ server {
 }
 ```
 
-In this case, In the `docker-compose.prod.yml` file, you need modify environment variables under `frontend > build > args` to specify values such as the API URL for the production environment. This ensures that when the frontend is built, the correct API endpoint is set.
+In this case, In the `docker-compose.prod.yml` file, you need modify environment variables under `frontend > build > args` to specify values such as the API URL for the production environment. This ensures that when the frontend is built, the correct API endpoint is set.
 
 ```yml
 args:
@@ -572,7 +572,7 @@ server {
 }
 ```
 
-You need create a symbolic link to this file in `sites-enabled/` to activate it:
+You need create a symbolic link to this file in `sites-enabled/` to activate it:
 
 ```bash
 ln -s /etc/nginx/sites-available/example.com.conf /etc/nginx/sites-enabled/
@@ -580,7 +580,7 @@ ln -s /etc/nginx/sites-available/example.com.conf /etc/nginx/sites-enabled/
 
 ## Next Steps
 
-After setting up Docker and NGINX, you may want to add HTTPS support. One popular and free solution is Certbot by Let’s Encrypt, which automates the process of obtaining and renewing SSL/TLS certificates. Ensure that your domain is correctly pointed to your server before running Certbot.
+After setting up Docker and NGINX, you may want to add HTTPS support. One popular and free solution is Certbot by Let’s Encrypt, which automates the process of obtaining and renewing SSL/TLS certificates. Ensure that your domain is correctly pointed to your server before running Certbot.
 
 ## Links
 
