@@ -1,5 +1,7 @@
 - name: Blog
   link: /
+- name: Projects
+  link: /projects/
 - name: Setup
   link: /setup/
 - name: About
