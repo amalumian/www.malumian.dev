@@ -1,8 +1,8 @@
 services:
   jekyll:
     build: .
-    image: www.amalumian.dev
-    container_name: www.amalumian.dev-container
+    image: www.malumian.dev
+    container_name: www.malumian.dev-container
     volumes:
       - .:/app
     ports:
