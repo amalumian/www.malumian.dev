@@ -35,8 +35,7 @@ kramdown:
 
 # SEO
 url: https://www.malumian.dev
-author:
-  twitter: amalumian
+author: Arthur Malumian
 twitter:
   username: amalumian
 logo: /assets/images/wide-logo.png
