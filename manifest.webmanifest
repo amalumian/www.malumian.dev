@@ -1,6 +1,19 @@
 {
+  "name": "Arthur Malumian",
+  "short_name": "Arthur Malumian",
+  "display": "standalone",
+  "description": "This is the blog of Arthur Malumian, a programmer who posts about software development and more. He shares about the books he's reading, the movies he's watching, and the trips he's taking.",
+  "start_url": "/",
   "icons": [
-    { "src": "/assets/images/favicons/icon-192.png", "type": "image/png", "sizes": "192x192" },
-    { "src": "/assets/images/favicons/icon-512.png", "type": "image/png", "sizes": "512x512" }
+    {
+      "src": "/assets/images/favicons/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/assets/images/favicons/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
   ]
 }
