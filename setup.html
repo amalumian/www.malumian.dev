@@ -51,7 +51,12 @@ image: /assets/images/wide-logo.png
         <li>Remap Caps Lock key to Control</li>
         <li>Create "Developer" folder in home directory</li>
         <li>Create "Work" folder in home directory</li>
-        <li>Remove delay of autohide dock (defaults write com.apple.dock autohide-delay -float 0; killall Dock)</li>
+        <li>
+            Remove delay of autohide dock <code class="language-plaintext highlighter-rouge">defaults write com.apple.dock autohide-delay -float 0; killall Dock</code>.
+        </li>
+        <li>
+            Move windows by holding ctrl+cmd <code class="language-plaintext highlighter-rouge">defaults write -g NSWindowShouldDragOnGesture -bool true</code>.
+        </li>
     </ul>
     <h2 id="fonts">Fonts</h2>
     <ul>
