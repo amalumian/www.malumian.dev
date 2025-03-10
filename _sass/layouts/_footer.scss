@@ -21,6 +21,11 @@
     margin-left: 0;
 
     list-style: none;
+
+    &_socials {
+      border-top: 0.1rem solid $color-white;
+      padding-top: 2rem;
+    }
   }
 
   &__item {
