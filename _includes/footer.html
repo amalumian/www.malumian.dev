@@ -1,6 +1,21 @@
 <footer class="footer">
   <div class="wrapper">
     <ul class="footer__list">
+      {% for item in site.data.projects %}
+      <li class="footer__item">
+        <a
+          class="footer__link footer__link_project"
+          href="{{ item.link }}"
+          target="_blank"
+          title="{{ item.name }}"
+          aria-label="{{ item.name }}"
+        >
+          {{ item.icon }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    <ul class="footer__list">
       {% for item in site.data.links %}
       <li class="footer__item">
         <a
@@ -30,8 +45,8 @@
         href="https://github.com/amalumian/www.malumian.dev"
         target="_blank"
       >
-        GitHub
-      </a >.
+        GitHub </a
+      >.
     </p>
     <p class="footer__copyright">
       Copyright &copy; 2024–2025

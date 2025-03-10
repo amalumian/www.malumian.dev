@@ -51,6 +51,19 @@
       height: 100%;
       fill: $color-white;
     }
+
+    &_project {
+      height: 3.6rem;
+      width: 3.6rem;
+
+      svg {
+        fill: inherit;
+
+        &:hover {
+          fill: inherit;
+        }
+      }
+    }
   }
 
   &__thanks {
