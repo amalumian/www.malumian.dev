@@ -47,21 +47,95 @@ image: /assets/images/wide-logo.png
     </ul>
     <h2 id="system-preferences">System Preferences</h2>
     <ul>
-        <li>Hide Dock and Menu</li>
-        <li>Remap Caps Lock key to Control</li>
-        <li>Create "Developer" folder in home directory</li>
-        <li>Create "Work" folder in home directory</li>
-        <li>
-            Remove delay of autohide dock <code class="language-plaintext highlighter-rouge">defaults write com.apple.dock autohide-delay -float 0; killall Dock</code>.
+        <li>Appearance
+            <ul>
+                <li>Show scroll bars: Always</li>
+                <li>Click in the scroll bar to: Jump to the spot that's clicked</li>
+            </ul>
         </li>
-        <li>
-            Move windows by holding ctrl+cmd <code class="language-plaintext highlighter-rouge">defaults write -g NSWindowShouldDragOnGesture -bool true</code>.
+        <li>Apple Intelligence &amp; Siri: false</li>
+        <li>Control Center
+            <ul>
+                <li>Clock: Flash the time separators</li>
+                <li>Automatically hide and show the menu bar: Always</li>
+            </ul>
+        </li>
+        <li>Desktop &amp; Dock
+            <ul>
+                <li>Position on screen: Left</li>
+                <li>Minimize windows using: Scale Effect</li>
+                <li>Animate opening applications: False</li>
+                <li>Automatically hide and show the Dock: True</li>
+                <li>Ask to keep changes when closing documents: True</li>
+                <li>Automatically rearrange Spaces based on most recent use: False</li>
+                <li>Group windows by application: True</li>
+            </ul>
+        </li>
+        <li>Display
+            <ul>
+                <li>Automatically adjust brightness: False</li>
+            </ul>
+        </li>
+        <li>Lock Screen
+            <ul>
+                <li>Show 24-hour time: False</li>
+            </ul>
+        </li>
+        <li>Trackpad
+            <ul>
+                <li>Tracking speed: Max</li>
+                <li>Click: Light</li>
+                <li>Dragging style: Three Finger Drag</li>
+                <li>Tap to click: On</li>
+            </ul>
+        </li>
+        <li>Keyboard
+            <ul>
+                <li>Key repeat rate: Max</li>
+                <li>Delay until repeat: Max</li>
+                <li>Adjust keyboard brightness in low light: False</li>
+                <li>Caps Lock: Control</li>
+                <li>Spotlight: Off</li>
+                <li>Press Globe key to: Do Nothing</li>
+                <li>Keyboard navigation: True</li>
+                <li>Input Sources: English (US), Russian (PC)</li>
+                <li>Correct spelling automatically: False</li>
+                <li>Capitalize words automatically: False</li>
+                <li>Show inline predictive text: False</li>
+                <li>Add period with double-space: False</li>
+                <li>Use smart quotes and dashes: False</li>
+                <li>Dictation: True</li>
+            </ul>
+        </li>
+        <li>Finder
+            <ul>
+                <li>New Finder windows show: Home Directory</li>
+                <li>Show all filename extensions: True</li>
+                <li>Remove items from the Trash after 30 days</li>
+                <li>Show Path Bar: True</li>
+                <li>Show Status Bar: True</li>
+                <li>Create "Developer" directory in home directory</li>
+                <li>Create "Work" directory in home directory</li>
+            </ul>
+        </li>
+        <li>Terminal
+            <ul>
+                <li>
+                    Remove delay of autohide dock <code class="language-plaintext highlighter-rouge">defaults write com.apple.dock autohide-delay -float 0; killall Dock</code>.
+                </li>
+                <li>
+                    Move windows by holding ctrl+cmd <code class="language-plaintext highlighter-rouge">defaults write -g NSWindowShouldDragOnGesture -bool true</code>.
+                </li>
+                <li>
+                    Remove characters with accent marks: <code class="language-plaintext highlighter-rouge">defaults write -g ApplePressAndHoldEnabled -bool false</code>
+                </li>
+            </ul>
         </li>
     </ul>
     <h2 id="fonts">Fonts</h2>
     <ul>
         <li>
-            <a href="https://github.com/ryanoasis/nerd-fonts" target="_blank">nerd-fonts</a> — Iosevka Nerd Font Mono
+            <a href="https://github.com/ryanoasis/nerd-fonts" target="_blank">nerd-fonts</a>: Iosevka Nerd Font Mono
         </li>
     </ul>
     <h2 id="apps">Apps</h2>
@@ -93,12 +167,19 @@ image: /assets/images/wide-logo.png
                 <li>Theme: Minimal</li>
                 <li>Colors: GruvboxDark</li>
                 <li>Font: Iosevka Nerd Font Mono, 20, Use ligatures</li>
-                <li>Cursor: Blinking cursor</li> 
+                <li>Cursor: Block, Blinking cursor</li> 
                 <li>Windows: Hide scrollbars</li>
                 <li>Keys: Left Option key Esc+</li>
             </ul>
         </li>
-        <li>Warp</li>
+        <li>Warp
+            <ul>
+                <li>Theme: Gruvbox Dark</li>
+                <li>Font: Iosevka Nerd Font Mono, 20, Use ligatures</li>
+                <li>Cursor: Block, Blinking cursor</li> 
+                <li>Left Option key is Meta: true</li>
+            </ul>
+        </li>
         <li>VS Code</li>
         <li>WebStorm</li>
         <li>Docker</li>
@@ -162,7 +243,7 @@ image: /assets/images/wide-logo.png
         <li>Raycast</li>
         <li>AltTab
             <ul>
-                <li>Hide window thumbnails</li>
+                <li>Appearance: App Icons</li>
             </ul>
         </li>
         <li>Scroll Reverser</li>
