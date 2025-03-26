@@ -45,7 +45,7 @@ For my terminal, I use [Warp](https://www.warp.dev){:target="_blank"}. I previou
 
 ![warp.webp](../assets/images/posts/2025-03-26-my-developer-workflow-on-macos/warp.webp)
 
-## Tmux
+## tmux
 
 [tmux](https://github.com/tmux/tmux){:target="_blank"} is a terminal multiplexer. I assume it needs no introduction.
 
