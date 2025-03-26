@@ -1,6 +1,14 @@
 .setup {
   margin-bottom: 1rem;
 
+  &__desk {
+    display: block;
+    margin-bottom: 1rem;
+
+    object-fit: cover;
+    object-position: center;
+  }
+
   h2 {
     margin-bottom: 0.5rem;
   }
