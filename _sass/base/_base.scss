@@ -109,6 +109,13 @@ img {
   width: 100%;
 }
 
+video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
 strong > em {
   color: $color-primary;
   font-weight: bold;
