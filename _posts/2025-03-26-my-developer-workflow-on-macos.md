@@ -31,7 +31,7 @@ I also recommend changing the shortcuts to Vim-style `hjkl` for better efficie
 
 An absolute must-have!
 
-![aerospace.webp](../assets/images/posts/2025-03-26-my-developer-workflow-on-macos/aerospace.webp)
+{% include video.html src="../assets/videos/posts/2025-03-26-my-developer-workflow-on-macos/aerospace.mp4" %}
 
 ## Raycast
 
