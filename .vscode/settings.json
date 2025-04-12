@@ -1,0 +1,11 @@
+{
+  "files.associations": {
+    "*.md": "jekyll",
+    "*.markdown": "jekyll",
+    "*.html": "jekyll",
+    "*.liquid": "jekyll"
+  },
+  "emmet.includeLanguages": {
+    "jekyll": "html"
+  }
+}
