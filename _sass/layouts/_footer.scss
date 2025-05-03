@@ -21,12 +21,6 @@
     margin-left: 0;
 
     list-style: none;
-
-    &_socials {
-      border-top: 0.1rem solid $color-white;
-      padding-top: 2rem;
-      width: 100%;
-    }
   }
 
   &__item {
@@ -56,19 +50,6 @@
       width: 100%;
       height: 100%;
       fill: $color-white;
-    }
-
-    &_project {
-      height: 3.6rem;
-      width: 3.6rem;
-
-      svg {
-        fill: inherit;
-
-        &:hover {
-          fill: inherit;
-        }
-      }
     }
   }
 
