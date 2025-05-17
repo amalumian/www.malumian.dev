@@ -19,6 +19,8 @@ There are many services to learn this skill, but my favorite — and the one I p
 
 Additionally, I highly recommend remapping `Caps Lock` to `Control`. You'll thank yourself later for doing this.
 
+Before we get started, you can find my configuration files on [GitHub](https://github.com/amalumian/dotfiles){:target="_blank"}.
+
 ![hhkb-professional-hybrid-type-s.webp](../assets/images/posts/2025-03-26-my-developer-workflow-on-macos/hhkb-professional-hybrid-type-s.webp)
 
 ## Aerospace
@@ -43,6 +45,8 @@ An absolute must-have!
 
 For my terminal, I use [Warp](https://www.warp.dev){:target="_blank"}. I previously used iTerm2, which is an excellent terminal, but Warp's AI-powered features won me over, so I switched to it.
 
+*Update 5/17/2025: I've switched to Ghostty.*
+
 ![warp.webp](../assets/images/posts/2025-03-26-my-developer-workflow-on-macos/warp.webp)
 
 ## tmux
@@ -50,8 +54,6 @@ For my terminal, I use [Warp](https://www.warp.dev){:target="_blank"}. I previou
 [tmux](https://github.com/tmux/tmux){:target="_blank"} is a terminal multiplexer. I assume it needs no introduction.
 
 The only thing I'd recommend is changing the default window index from 0 to 1. Since keyboard number keys start at 1, it feels more intuitive. Also, I suggest remapping the pane navigation shortcuts to Vim-style `hjkl`. 
-
-At the end of this post, you'll find a link to my config with these changes, or you can explore other solutions.
 
 ![tmux.webp](../assets/images/posts/2025-03-26-my-developer-workflow-on-macos/tmux.webp)
 
@@ -78,7 +80,3 @@ There are multiple ways to sync notes across devices. You can store your vault i
 And yes, it supports Vim motions. As you can see, I use the same navigation model across all my tools, which is incredibly convenient.
 
 ![obsidian.webp](../assets/images/posts/2025-03-26-my-developer-workflow-on-macos/obsidian.webp)
-
-## My Links
-
-Other applications I use but didn't mention in this post can be found on the [Setup page](https://www.malumian.dev/setup/){:target="_blank"} of my website. You can also find my configuration files on [GitHub](https://github.com/amalumian/dotfiles){:target="_blank"}.
