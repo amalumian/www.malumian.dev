@@ -19,7 +19,7 @@ There are many services to learn this skill, but my favorite — and the one I p
 
 Additionally, I highly recommend remapping `Caps Lock` to `Control`. You'll thank yourself later for doing this.
 
-Before we get started, you can find my configuration files on [GitHub](https://github.com/amalumian/dotfiles){:target="_blank"}.
+Before we get started, you can find my [dotfiles](https://github.com/amalumian/dotfiles){:target="_blank"} on GitHub.
 
 ![hhkb-professional-hybrid-type-s.webp](../assets/images/posts/2025-03-26-my-developer-workflow-on-macos/hhkb-professional-hybrid-type-s.webp)
 
