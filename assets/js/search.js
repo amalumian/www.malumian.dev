@@ -18,7 +18,7 @@
         appendString += '<p class="post__date">' + item.date + '</p>';
         appendString +=
           '<p class="post__excerpt">' +
-          item.content.substring(0, 180).trimRight() +
+          item.content.substring(0, 200).trimRight() +
           '...</p></a></article>';
       }
       searchResults.innerHTML = appendString;
