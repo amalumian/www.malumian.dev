@@ -2,6 +2,7 @@
 import Head from '@/components/Head.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
+import Sprite from '@/components/Sprite.astro';
 
 interface Props {
 	title: string;
@@ -19,6 +20,7 @@ const { title, description, pubDate, image } = Astro.props;
 		<Head title={title} description={description} pubDate={pubDate} image={image} />
 	</head>
 	<body>
+		<Sprite />
 		<a href="#content" class="skip-link visually-hidden">Skip to main content</a>
 		<Header />
 		<main id="content" class="main"><slot /></main>
