@@ -1,0 +1,53 @@
+---
+import { Image } from 'astro:assets';
+
+import Default from '@/layouts/Default.astro';
+import DeskImage from '@/assets/setup/desk.webp';
+import { PAGES_METADATA } from '@/consts';
+
+const { title, description } = PAGES_METADATA.setup;
+---
+
+<Default title={title} description={description}>
+	<section>
+		<h1>{title}</h1>
+		<p>This page provides an overview of my setup.</p>
+		<p>
+			<Image src={DeskImage} alt="Desktop" />
+		</p>
+
+		<h2>Table of Contents</h2>
+		<ul>
+			<li><a href="#technical-gear">Technical Gear</a></li>
+			<li><a href="#macbook-specification">MacBook Specification</a></li>
+		</ul>
+
+		<h2 id="technical-gear">Technical Gear</h2>
+		<ul>
+			<li><b>Laptop:</b> Apple MacBook Air M1</li>
+			<li><b>Mini PC:</b> Apple Mac mini (2018)</li>
+			<li><b>Monitor:</b> LG UltraGear 27GN800-B</li>
+			<li><b>Monitor Arm:</b> ONKRON G80</li>
+			<li><b>Light Bar:</b> Mi Computer Monitor Light Bar</li>
+			<li><b>Keyboard:</b> NuPhy Air75 V2 &amp; Apple Magic Keyboard</li>
+			<li><b>Mouse:</b> Logitech MX Master 3S &amp; Logitech Signature M650 L</li>
+			<li><b>Trackpad:</b> Apple Magic Trackpad</li>
+			<li><b>Headphones:</b> Sony WH-1000XM4</li>
+			<li><b>Phone:</b> Apple iPhone 12 Pro Max</li>
+			<li><b>Watch:</b> Apple Watch Series 3</li>
+			<li><b>Player:</b> Apple iPod Classic</li>
+			<li><b>E-Reader:</b> Amazon Kindle Scribe</li>
+			<li><b>Console:</b> Microsoft Xbox Series S</li>
+			<li><b>Desk:</b> Ergostol Start 2.0</li>
+			<li><b>Cable Management Tray:</b> Ergostol Tao 2.0</li>
+		</ul>
+
+		<h2 id="macbook-specification">MacBook Specification</h2>
+		<ul>
+			<li>13.3”</li>
+			<li>Apple M1 chip</li>
+			<li>16 GB RAM</li>
+			<li>512 GB SSD</li>
+		</ul>
+	</section>
+</Default>
