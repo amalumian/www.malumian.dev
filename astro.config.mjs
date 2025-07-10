@@ -3,8 +3,23 @@ import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 
-// https://astro.build/config
+import { remarkReadingTime } from './plugins/remark-reading-time.mjs';
+
 export default defineConfig({
-	site: 'https://example.com',
-	integrations: [mdx(), sitemap()],
+	site: 'https://www.malumian.dev',
+	integrations: [
+		mdx(),
+		sitemap({
+			filter: (page) => !page.includes('tags'),
+		}),
+	],
+	markdown: {
+		shikiConfig: {
+			theme: 'github-dark-default',
+		},
+		remarkPlugins: [remarkReadingTime],
+	},
+	devToolbar: {
+		enabled: false,
+	},
 });
