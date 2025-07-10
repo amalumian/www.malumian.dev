@@ -1,6 +1,50 @@
-export const AUTHOR = 'Arthur Malumian';
+export const SITE_TITLE = 'Arthur Malumian';
 
-export const CONTACTS = [
+export const PAGES_METADATA = {
+	home: {
+		title: 'Home',
+		description:
+			'Arthur Malumian is a programmer who loves web technologies. He works as a Front End Developer and writes posts on his blog.',
+	},
+	blog: {
+		title: 'Blog',
+		description:
+			"This is the blog of Arthur Malumian, a programmer who posts about software development and more. He shares about the books he's reading, the movies he's watching, and the trips he's taking.",
+	},
+	projects: {
+		title: 'Projects',
+		description: "This page provides an overview of Arthur Malumian's projects.",
+	},
+	setup: {
+		title: 'Setup',
+		description: "This page provides an overview of Arthur Malumian's personal setup.",
+	},
+	404: {
+		title: '404',
+		description: 'Page not found.',
+	},
+};
+
+export const ROUTES = [
+	{
+		name: 'Home',
+		link: '/',
+	},
+	{
+		name: 'Blog',
+		link: '/blog',
+	},
+	{
+		name: 'Projects',
+		link: '/projects',
+	},
+	{
+		name: 'Setup',
+		link: '/setup',
+	},
+];
+
+export const SOCIALS = [
 	{
 		name: 'GitHub',
 		link: 'https://github.com/amalumian',
@@ -42,32 +86,8 @@ export const CONTACTS = [
 		icon: 'youtube',
 	},
 	{
-		name: 'Mail',
-		link: 'mailto:arthurmalumian@gmail.com',
-		icon: 'email',
-	},
-	{
 		name: 'RSS',
 		link: '/feed.xml',
 		icon: 'rss',
-	},
-];
-
-export const NAVIGATION = [
-	{
-		name: 'Blog',
-		link: '/',
-	},
-	{
-		name: 'Projects',
-		link: '/projects/',
-	},
-	{
-		name: 'Setup',
-		link: '/setup/',
-	},
-	{
-		name: 'About',
-		link: '/about/',
 	},
 ];
