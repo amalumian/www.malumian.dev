@@ -1,141 +1,172 @@
-/*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
 
-:root {
-	--accent: #2337ff;
-	--accent-dark: #000d8a;
-	--black: 15, 18, 25;
-	--gray: 96, 115, 159;
-	--gray-light: 229, 233, 240;
-	--gray-dark: 34, 41, 57;
-	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
-	--box-shadow:
-		0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
-		0 16px 32px rgba(var(--gray), 33%);
+html {
+	font-size: 62.5%;
 }
-@font-face {
-	font-family: 'Atkinson';
-	src: url('/fonts/atkinson-regular.woff') format('woff');
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'Atkinson';
-	src: url('/fonts/atkinson-bold.woff') format('woff');
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
-}
+
 body {
-	font-family: 'Atkinson', sans-serif;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 	margin: 0;
-	padding: 0;
+	font-family: var(--font-family-sans-serif);
+	line-height: var(--line-height-default);
+	font-size: var(--font-size-default);
+	color: var(--color-black);
 	text-align: left;
-	background: linear-gradient(var(--gray-gradient)) no-repeat;
-	background-size: 100% 600px;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	color: rgb(var(--gray-dark));
-	font-size: 20px;
-	line-height: 1.7;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: var(--color-white);
 }
+
 main {
-	width: 720px;
-	max-width: calc(100% - 2em);
-	margin: auto;
-	padding: 3em 1em;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	padding: 0 2rem;
+	max-width: 760px;
+	width: 100%;
 }
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-	margin: 0 0 0.5rem 0;
-	color: rgb(var(--black));
+	margin: 2rem 0 0 0;
 	line-height: 1.2;
+	font-family: var(--font-family-sans-serif-condensed);
 }
 h1 {
-	font-size: 3.052em;
+	font-size: var(--font-size-heading-1);
+	text-transform: uppercase;
 }
 h2 {
-	font-size: 2.441em;
+	font-size: var(--font-size-heading-2);
 }
 h3 {
-	font-size: 1.953em;
+	font-size: var(--font-size-heading-3);
 }
 h4 {
-	font-size: 1.563em;
+	font-size: var(--font-size-heading-4);
 }
-h5 {
-	font-size: 1.25em;
-}
+
 strong,
 b {
 	font-weight: 700;
 }
+strong > em {
+	color: var(--color-primary);
+	font-weight: bold;
+	font-style: normal;
+}
+
 a {
-	color: var(--accent);
+	color: inherit;
+	text-decoration-style: solid;
+	text-decoration-line: underline;
+	text-decoration-skip-ink: auto;
+	text-decoration-thickness: auto;
+	text-underline-offset: 0.1rem;
+	text-underline-position: from-font;
 }
 a:hover {
-	color: var(--accent);
+	color: var(--color-primary);
 }
+a:active {
+	color: var(--color-primary-dark);
+}
+a svg:hover {
+	fill: var(--color-primary);
+}
+a svg:active {
+	fill: var(--color-primary-dark);
+}
+sup a {
+	text-decoration: none;
+}
+
 p {
 	margin-bottom: 1em;
 }
-.prose p {
-	margin-bottom: 2em;
+
+ul {
+	list-style: square;
 }
+
 textarea {
 	width: 100%;
-	font-size: 16px;
+	font-size: var(--font-size-default);
 }
 input {
 	font-size: 16px;
 }
+
 table {
 	width: 100%;
 }
+
 img {
+	display: block;
+	width: 100%;
 	max-width: 100%;
 	height: auto;
-	border-radius: 8px;
+	object-fit: cover;
+	object-position: center;
 }
+
+figure {
+	margin: 2rem 0;
+}
+
+svg {
+	display: block;
+	fill: currentColor;
+}
+
+video {
+	display: block;
+}
+
 code {
-	padding: 2px 5px;
-	background-color: rgb(var(--gray-light));
-	border-radius: 2px;
+	background-color: var(--color-gray-light);
+	font-family: 'JetBrains Mono', monospace;
 }
 pre {
-	padding: 1.5em;
-	border-radius: 8px;
+	padding: 1.5rem;
+	font-family: 'JetBrains Mono', monospace;
 }
 pre > code {
 	all: unset;
 }
+
 blockquote {
-	border-left: 4px solid var(--accent);
-	padding: 0 0 0 20px;
-	margin: 0px;
-	font-size: 1.333em;
+	border-left: 0.4rem solid var(--color-primary);
+	padding: 0 0 0 2rem;
+	margin: 0;
+	font-size: var(--font-size-default);
 }
+
 hr {
 	border: none;
 	border-top: 1px solid rgb(var(--gray-light));
 }
-@media (max-width: 720px) {
-	body {
-		font-size: 18px;
-	}
-	main {
-		padding: 1em;
+
+@media (max-width: 760px) {
+	html {
+		font-size: 50%;
 	}
 }
 
+/* SR ONLY */
 .sr-only {
 	border: 0;
 	padding: 0;
@@ -152,4 +183,13 @@ hr {
 	clip-path: inset(50%);
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
+}
+
+*:focus {
+	outline: none;
+}
+
+*:focus-visible {
+	outline: 0.2rem dashed var(--color-primary);
+	outline-offset: 0.5rem;
 }
