@@ -3,27 +3,30 @@ import Head from '@/components/Head.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import Sprite from '@/components/Sprite.astro';
+import SkipLink from '@/components/SkipLink.astro';
 
 interface Props {
 	title: string;
 	description: string;
-	pubDate?: Date;
+	date?: Date;
 	image?: ImageMetadata;
 }
 
-const { title, description, pubDate, image } = Astro.props;
+const { title, description, date, image } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en-US">
 	<head>
-		<Head title={title} description={description} pubDate={pubDate} image={image} />
+		<Head title={title} description={description} date={date} image={image} />
 	</head>
 	<body>
 		<Sprite />
-		<a href="#content" class="skip-link visually-hidden">Skip to main content</a>
+		<SkipLink />
 		<Header />
-		<main id="content" class="main"><slot /></main>
+		<main id="content" class="main">
+			<slot />
+		</main>
 		<Footer />
 	</body>
 </html>
