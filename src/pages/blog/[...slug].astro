@@ -24,7 +24,6 @@ const posts = (await getCollection('blog')).sort(
 const currentPostIndex = posts.findIndex((p) => p.id === post.id);
 const previousPost = currentPostIndex < posts.length - 1 ? posts[currentPostIndex + 1] : null;
 const nextPost = currentPostIndex > 0 ? posts[currentPostIndex - 1] : null;
-console.log(previousPost, nextPost);
 const {
 	title,
 	description,
