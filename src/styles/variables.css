@@ -1,0 +1,29 @@
+:root {
+	--color-primary: #9b111e;
+	--color-primary-dark: #691021;
+	--color-primary-light: #cd888f;
+	--color-black: #000000;
+	--color-black-rgba: 0, 0, 0;
+	--color-white: #ffffff;
+	--color-gray: #d2d2d2; /* gray-light-2 */
+	--color-gray-dark: #575757; /* gray-dark */
+	--color-gray-light: #e6e6e6; /* gray-light-1 */
+	--color-gray-gradient: linear-gradient(to right, #434343 0%, black 100%);
+
+	--font-size-small: 1.28rem;
+	--font-size-medium: 1.6rem;
+	--font-size-default: 2rem;
+	--font-size-heading-4: 2.5rem;
+	--font-size-heading-3: 3.125rem;
+	--font-size-heading-2: 3.906rem;
+	--font-size-heading-1: 4.883rem;
+
+	--line-height-default: 1.7;
+
+	--font-family-serif: 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+	--font-family-sans-serif: 'Roboto', Arial, Helvetica, sans-serif;
+	--font-family-sans-serif-condensed: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+	--font-family-monospace: 'JetBrains Mono', Consolas, Menlo, 'Courier New', monospace;
+
+	--border: 0.2rem solid var(--color-black);
+}
