@@ -22,3 +22,7 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# post examples
+src/content/blog/markdown-style-guide.md
+src/content/blog/using-mdx.mdx
