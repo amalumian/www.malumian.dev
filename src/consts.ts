@@ -87,7 +87,7 @@ export const SOCIALS = [
 	},
 	{
 		name: 'RSS',
-		link: '/feed.xml',
+		link: '/rss.xml',
 		icon: 'rss',
 	},
 ];
