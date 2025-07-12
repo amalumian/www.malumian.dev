@@ -13,7 +13,6 @@ export async function GET(context) {
     title: SITE_TITLE,
     description: PAGES_METADATA.blog.description,
     site: context.site,
-    trailingSlash: false,
     items: posts.map((post) => ({
       title: post.data.title,
       pubDate: post.data.date,
