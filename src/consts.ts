@@ -4,7 +4,7 @@ export const PAGES_METADATA = {
   home: {
     title: 'Home',
     description:
-      'Arthur Malumian is a programmer who loves web technologies. He works as a Front End Developer and writes posts on his blog.',
+      'This is personal website of Arthur Malumian, a programmer who loves web technologies. He works as a Front End Developer and writes posts on his blog.',
   },
   blog: {
     title: 'Blog',
