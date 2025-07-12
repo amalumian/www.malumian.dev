@@ -251,19 +251,19 @@ server {
 When running React (Vite) apps inside Docker, it’s important to configure the Vite server correctly for development mode:
 
 ```js
-import { defineConfig } from 'vite';
+import {defineConfig} from 'vite';
 import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	plugins: [react()],
-	server: {
-		host: '0.0.0.0',
-		port: 5173,
-		watch: {
-			usePolling: true,
-		},
-	},
+  plugins: [react()],
+  server: {
+    host: '0.0.0.0',
+    port: 5173,
+    watch: {
+      usePolling: true,
+    },
+  },
 });
 ```
 
