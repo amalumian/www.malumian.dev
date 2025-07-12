@@ -1,7 +1,7 @@
 ---
-import type { ImageMetadata } from 'astro';
+import type {ImageMetadata} from 'astro';
 
-import { SITE_TITLE } from '@/consts';
+import {SITE_TITLE} from '@/consts';
 import FallbackImage from '@/assets/wide-logo.png';
 
 import '@/styles/variables.css';
@@ -9,141 +9,148 @@ import '@/styles/fonts.css';
 import '@/styles/global.css';
 
 interface Props {
-	title: string;
-	description: string;
-	date?: Date;
-	image?: ImageMetadata;
+  title: string;
+  description: string;
+  date?: Date;
+  image?: ImageMetadata;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, date, image = FallbackImage } = Astro.props;
+const {title, description, date, image = FallbackImage} = Astro.props;
 ---
 
 <!-- Google tag (gtag.js) -->
-<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-GE3HBN0R3D"></script>
+<script
+  is:inline
+  async
+  src='https://www.googletagmanager.com/gtag/js?id=G-GE3HBN0R3D'></script>
 <script is:inline>
-	window.dataLayer = window.dataLayer || [];
-	function gtag() {
-		dataLayer.push(arguments);
-	}
-	gtag('js', new Date());
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    // eslint-disable-next-line no-undef
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
 
-	gtag('config', 'G-GE3HBN0R3D');
+  gtag('config', 'G-GE3HBN0R3D');
 </script>
-<!-- Google tag (gtag.js) --><!-- Verifications -->
-<meta name="google-site-verification" content="6BZTRqcdqKLNwlSNQxc8qqbARBH8_K2UGhtc0GlQafA" />
-<meta name="yandex-verification" content="db8c87467f0d3380" />
+<!-- Google tag (gtag.js) -->
+<meta
+  name='google-site-verification'
+  content='6BZTRqcdqKLNwlSNQxc8qqbARBH8_K2UGhtc0GlQafA'
+/>
+<meta name='yandex-verification' content='db8c87467f0d3380' />
 
-<!-- Global Metadata -->
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="sitemap" href="/sitemap-index.xml" />
+<meta charset='utf-8' />
+<meta name='viewport' content='width=device-width,initial-scale=1' />
+<link rel='sitemap' href='/sitemap-index.xml' />
 <link
-	rel="alternate"
-	type="application/rss+xml"
-	title={SITE_TITLE}
-	href={new URL('rss.xml', Astro.site)}
+  rel='alternate'
+  type='application/rss+xml'
+  title={SITE_TITLE}
+  href={new URL('rss.xml', Astro.site)}
 />
-<meta name="generator" content={Astro.generator} />
+<meta name='generator' content={Astro.generator} />
 
-<!-- Favicons -->
-<link rel="icon" href="/favicons/favicon.ico" sizes="32x32" />
-<link rel="icon" href="/favicons/icon.svg" type="image/svg+xml" />
-<link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" />
-<link rel="manifest" href="/manifest.webmanifest" />
+<link rel='icon' href='/favicons/favicon.ico' sizes='32x32' />
+<link rel='icon' href='/favicons/icon.svg' type='image/svg+xml' />
+<link rel='apple-touch-icon' href='/favicons/apple-touch-icon.png' />
+<link rel='manifest' href='/manifest.webmanifest' />
 
-<!-- Font preloads -->
 <link
-	rel="preload"
-	href="/fonts/monospace/jetbrainsmono-regular.woff2"
-	as="font"
-	type="font/woff2"
-	crossorigin
+  rel='preload'
+  href='/fonts/monospace/jetbrainsmono-regular.woff2'
+  as='font'
+  type='font/woff2'
+  crossorigin
 />
 <link
-	rel="preload"
-	href="/fonts/monospace/jetbrainsmono-bold.woff2"
-	as="font"
-	type="font/woff2"
-	crossorigin
+  rel='preload'
+  href='/fonts/monospace/jetbrainsmono-bold.woff2'
+  as='font'
+  type='font/woff2'
+  crossorigin
 />
 <link
-	rel="preload"
-	href="/fonts/monospace/jetbrainsmono-italic.woff2"
-	as="font"
-	type="font/woff2"
-	crossorigin
+  rel='preload'
+  href='/fonts/monospace/jetbrainsmono-italic.woff2'
+  as='font'
+  type='font/woff2'
+  crossorigin
 />
 <link
-	rel="preload"
-	href="/fonts/sans-serif/roboto-regular.woff2"
-	as="font"
-	type="font/woff2"
-	crossorigin
+  rel='preload'
+  href='/fonts/sans-serif/roboto-regular.woff2'
+  as='font'
+  type='font/woff2'
+  crossorigin
 />
 <link
-	rel="preload"
-	href="/fonts/sans-serif/roboto-bold.woff2"
-	as="font"
-	type="font/woff2"
-	crossorigin
+  rel='preload'
+  href='/fonts/sans-serif/roboto-bold.woff2'
+  as='font'
+  type='font/woff2'
+  crossorigin
 />
 <link
-	rel="preload"
-	href="/fonts/sans-serif/roboto-italic.woff2"
-	as="font"
-	type="font/woff2"
-	crossorigin
+  rel='preload'
+  href='/fonts/sans-serif/roboto-italic.woff2'
+  as='font'
+  type='font/woff2'
+  crossorigin
 />
 <link
-	rel="preload"
-	href="/fonts/sans-serif/robotocondensed-regular.woff2"
-	as="font"
-	type="font/woff2"
-	crossorigin
+  rel='preload'
+  href='/fonts/sans-serif/robotocondensed-regular.woff2'
+  as='font'
+  type='font/woff2'
+  crossorigin
 />
 <link
-	rel="preload"
-	href="/fonts/sans-serif/robotocondensed-bold.woff2"
-	as="font"
-	type="font/woff2"
-	crossorigin
+  rel='preload'
+  href='/fonts/sans-serif/robotocondensed-bold.woff2'
+  as='font'
+  type='font/woff2'
+  crossorigin
 />
 <link
-	rel="preload"
-	href="/fonts/sans-serif/robotocondensed-italic.woff2"
-	as="font"
-	type="font/woff2"
-	crossorigin
+  rel='preload'
+  href='/fonts/sans-serif/robotocondensed-italic.woff2'
+  as='font'
+  type='font/woff2'
+  crossorigin
 />
 
-<!-- Canonical URL -->
-<link rel="canonical" href={canonicalURL} />
+<link rel='canonical' href={canonicalURL} />
 
-<!-- Primary Meta Tags -->
-<meta name="author" content={SITE_TITLE} />
+<meta name='author' content={SITE_TITLE} />
 <title>{title} | {SITE_TITLE}</title>
-<meta name="title" content={`${title} | ${SITE_TITLE}`} />
-<meta name="description" content={description} />
+<meta name='title' content={`${title} | ${SITE_TITLE}`} />
+<meta name='description' content={description} />
 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content={Astro.url.pathname.includes('/blog/') ? 'article' : 'website'} />
-<meta property="og:url" content={Astro.url} />
-<meta property="og:title" content={`${title} | ${SITE_TITLE}`} />
-<meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image.src, Astro.url)} />
-<meta property="og:locale" content="en_US" />
-<meta property="og:site_name" content={Astro.url.host} />
+<meta
+  property='og:type'
+  content={Astro.url.pathname.includes('/blog/') ? 'article' : 'website'}
+/>
+<meta property='og:url' content={Astro.url} />
+<meta property='og:title' content={`${title} | ${SITE_TITLE}`} />
+<meta property='og:description' content={description} />
+<meta property='og:image' content={new URL(image.src, Astro.url)} />
+<meta property='og:locale' content='en_US' />
+<meta property='og:site_name' content={Astro.url.host} />
 
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={Astro.url} />
+<meta property='twitter:card' content='summary_large_image' />
+<meta property='twitter:url' content={Astro.url} />
 <!-- EXAMPLE <meta property="twitter:url" content="https://www.malumian.dev/my-developer-workflow-on-macos/"> -->
-<meta property="twitter:title" content={`${title} | ${SITE_TITLE}`} />
-<meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image.src, Astro.url)} />
-<meta property="twitter:domain" content={Astro.url.host} />
+<meta property='twitter:title' content={`${title} | ${SITE_TITLE}`} />
+<meta property='twitter:description' content={description} />
+<meta property='twitter:image' content={new URL(image.src, Astro.url)} />
+<meta property='twitter:domain' content={Astro.url.host} />
 <!-- EXAMPLE <meta property="twitter:domain" content="www.malumian.dev"> -->
 
-{date && <meta property="article:published_time" content={date.toISOString()} />}
+{
+  date && (
+    <meta property='article:published_time' content={date.toISOString()} />
+  )
+}

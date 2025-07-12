@@ -1,60 +1,73 @@
 ---
-import { SOCIALS } from '@/consts';
-
 import Icon from './Icon.astro';
+
+import {SOCIALS} from '@/consts';
 ---
 
-<footer class="footer">
-	<div class="wrapper">
-		<ul class="list">
-			{
-				SOCIALS.map((link) => (
-					<li class="list-item">
-						<a class="link" href={link.link} title={link.name} aria-label={link.name}>
-							<Icon name={link.icon} />
-						</a>
-					</li>
-				))
-			}
-		</ul>
-		<p class="copyright">
-			Copyright &copy; 2024–2025
-			<a href="https://github.com/malumian/www/blob/main/LICENSE">Arthur Malumian</a>
-		</p>
-	</div>
+<footer class='footer'>
+  <div class='wrapper'>
+    <ul class='list'>
+      {
+        SOCIALS.map((link) => (
+          <li class='list-item'>
+            <a
+              class='link'
+              href={link.link}
+              title={link.name}
+              aria-label={link.name}
+            >
+              <Icon name={link.icon} width='3rem' height='3rem' block />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <p class='copyright'>
+      Copyright &copy; 2024–2025
+      <a href='https://github.com/malumian/www/blob/main/LICENSE'
+        >Arthur Malumian</a
+      >
+    </p>
+  </div>
 </footer>
 
 <style>
-	.footer {
-		text-align: center;
-		color: var(--color-white);
-		background-color: var(--color-black);
-		background-image: var(--color-gray-gradient);
-		font-size: var(--font-size-medium);
-	}
+  .footer {
+    text-align: center;
+    color: var(--color-white);
+    background-color: var(--color-black);
+    background-image: var(--color-gray-gradient);
+    font-size: var(--font-size-medium);
+  }
 
-	.wrapper {
-		margin: 0 auto;
-		padding: 2rem;
-		max-width: 760px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 2rem;
-	}
+  .wrapper {
+    margin: 0 auto;
+    padding: 2rem;
+    max-width: 760px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
 
-	.list {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		align-items: center;
-		gap: 1rem;
-		list-style: none;
-		margin: 0;
-		padding: 0;
-	}
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 
-	.copyright {
-		margin: 0;
-	}
+  .link {
+    width: 3rem;
+    height: 3rem;
+    display: block;
+  }
+
+  .copyright {
+    margin: 0;
+  }
 </style>

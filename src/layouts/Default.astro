@@ -1,4 +1,6 @@
 ---
+import type {ImageMetadata} from 'astro';
+
 import Head from '@/components/Head.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
@@ -6,27 +8,27 @@ import Sprite from '@/components/Sprite.astro';
 import SkipLink from '@/components/SkipLink.astro';
 
 interface Props {
-	title: string;
-	description: string;
-	date?: Date;
-	image?: ImageMetadata;
+  title: string;
+  description: string;
+  date?: Date;
+  image?: ImageMetadata;
 }
 
-const { title, description, date, image } = Astro.props;
+const {title, description, date, image} = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en-US">
-	<head>
-		<Head title={title} description={description} date={date} image={image} />
-	</head>
-	<body>
-		<Sprite />
-		<SkipLink />
-		<Header />
-		<main id="content" class="main">
-			<slot />
-		</main>
-		<Footer />
-	</body>
+<html lang='en-US'>
+  <head>
+    <Head title={title} description={description} date={date} image={image} />
+  </head>
+  <body>
+    <Sprite />
+    <SkipLink />
+    <Header />
+    <main id='content' class='main'>
+      <slot />
+    </main>
+    <Footer />
+  </body>
 </html>

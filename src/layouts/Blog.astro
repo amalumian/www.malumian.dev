@@ -1,0 +1,153 @@
+---
+import {getCollection, type CollectionEntry} from 'astro:content';
+import {Image} from 'astro:assets';
+
+import Default from '@/layouts/Default.astro';
+import FormattedDate from '@/components/FormattedDate.astro';
+
+type BlogPost = CollectionEntry<'blog'>;
+
+interface Props {
+  title: string;
+  description: string;
+  filteredPosts?: BlogPost[];
+  selectedTag?: string;
+}
+
+const {title, description, filteredPosts, selectedTag} = Astro.props;
+
+const allPosts = (await getCollection('blog')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())].sort();
+
+const postsToRender = filteredPosts ?? allPosts;
+---
+
+<Default title={title} description={description}>
+  <section class='blog'>
+    <h1>{title}</h1>
+    <div class='posts-details'>
+      <div class='posts-count'>
+        Showing {postsToRender.length} of {allPosts.length}
+        {allPosts.length === 1 ? 'post' : 'posts'}
+      </div>
+      <select id='tags-select'>
+        <option value='all' selected={selectedTag === undefined}>—</option>
+        {
+          tags.map((tag) => (
+            <option value={tag} selected={tag === selectedTag}>
+              {tag}
+            </option>
+          ))
+        }
+      </select>
+    </div>
+    <div class='posts-list'>
+      {
+        postsToRender.map((post: BlogPost) => {
+          const {image, alt} = post.data.imageData;
+          return (
+            <article class='post'>
+              <a class='post-link' href={`/blog/${post.id}`}>
+                <Image
+                  class='post-image'
+                  src={image}
+                  alt={`Post cover: ${alt}`}
+                />
+                <div class='post-details'>
+                  <h2 class='post-heading'>{post.data.title}</h2>
+                  <FormattedDate date={post.data.date} />
+                </div>
+              </a>
+            </article>
+          );
+        })
+      }
+    </div>
+  </section>
+</Default>
+
+<style>
+  .posts-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    font-family: var(--font-family-sans-serif-condensed);
+    font-size: var(--font-size-medium);
+  }
+
+  .posts-count {
+    margin: 0;
+    line-height: 1;
+  }
+
+  #tags-select {
+    display: block;
+    margin: 0;
+    border-radius: 0;
+    font-family: var(--font-family-sans-serif-condensed);
+    font-size: var(--font-size-medium);
+  }
+
+  .posts-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+
+  .post:first-child {
+    flex-basis: 100%;
+  }
+
+  .post {
+    flex-basis: calc(50% - 1rem);
+  }
+
+  .post-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .post-image {
+    aspect-ratio: 16 / 9;
+  }
+
+  .post-details {
+    font-family: var(--font-family-sans-serif-condensed);
+  }
+
+  .post-heading {
+    margin: 0;
+    font-size: var(--font-size-heading-3);
+  }
+
+  @media only screen and (max-width: 500px) {
+    .posts-list {
+      flex-direction: column;
+    }
+    .post {
+      flex-basis: 100%;
+    }
+  }
+</style>
+
+<script>
+  const tagsSelect = document.getElementById('tags-select');
+  if (tagsSelect) {
+    tagsSelect.addEventListener('change', (event) => {
+      const target = event.target as HTMLSelectElement;
+      const value = target.value;
+      if (value === 'all') {
+        window.location.href = '/blog';
+      } else {
+        window.location.href = `/blog/tags/${value}`;
+      }
+    });
+  }
+</script>

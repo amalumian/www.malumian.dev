@@ -1,16 +1,16 @@
 ---
 import Default from '@/layouts/Default.astro';
-import { PAGES_METADATA } from '@/consts';
+import {PAGES_METADATA} from '@/consts';
 
-const { title, description } = PAGES_METADATA['404'];
+const {title, description} = PAGES_METADATA['404'];
 ---
 
 <Default title={title} description={description}>
-	<section>
-		<h1>{title}</h1>
-		<p>Page not found! :(</p>
-		<p>
-			Go to <a href="/">start page</a>
-		</p>
-	</section>
+  <section>
+    <h1>{title}</h1>
+    <p>Page not found! :(</p>
+    <p>
+      Go to <a href='/'>start page</a>
+    </p>
+  </section>
 </Default>

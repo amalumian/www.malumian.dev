@@ -1,152 +1,199 @@
 ---
-import { type CollectionEntry, getCollection, render } from 'astro:content';
-import { Image } from 'astro:assets';
+import {type CollectionEntry, getCollection, render} from 'astro:content';
+import {Image} from 'astro:assets';
 
 import FormattedDate from '@/components/FormattedDate.astro';
 import Default from '@/layouts/Default.astro';
 
 export async function getStaticPaths() {
-	const posts = await getCollection('blog');
-	return posts.map((post) => ({
-		params: { slug: post.id },
-		props: post,
-	}));
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: {slug: post.id},
+    props: post,
+  }));
 }
 
 type Props = CollectionEntry<'blog'>;
 
 const post = Astro.props;
-const { Content, remarkPluginFrontmatter } = await render(post);
-const { minutesRead } = remarkPluginFrontmatter;
+const {Content, remarkPluginFrontmatter} = await render(post);
+const {minutesRead} = remarkPluginFrontmatter;
 const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 );
 const currentPostIndex = posts.findIndex((p) => p.id === post.id);
-const previousPost = currentPostIndex < posts.length - 1 ? posts[currentPostIndex + 1] : null;
+const previousPost =
+  currentPostIndex < posts.length - 1 ? posts[currentPostIndex + 1] : null;
 const nextPost = currentPostIndex > 0 ? posts[currentPostIndex - 1] : null;
 const {
-	title,
-	description,
-	date,
-	imageData: { image, alt, figcaption },
-	tags,
+  title,
+  description,
+  date,
+  imageData: {image, alt, figcaption},
+  tags,
 } = post.data;
 const minutesReadNumber = parseInt(minutesRead, 10);
 ---
 
 <Default title={title} description={description} date={date} image={image}>
-	<article class="post">
-		<header>
-			<h1>{title}</h1>
-			<ul class="list">
-				<li class="list-item">
-					<FormattedDate date={date} />
-				</li>
-				<li class="list-item">{minutesReadNumber} minutes to read</li>
-			</ul>
-			<figure class="figure">
-				<Image class="figure-image" src={image} alt={`Post cover: ${alt}`} />
-				<figcaption class="figcaption">
-					{figcaption}
-				</figcaption>
-			</figure>
-		</header>
-		<Content />
-		<div class="posts-nav">
-			{
-				previousPost && (
-					<div class="posts-nav-item posts-nav-item-prev">
-						<a class="posts-nav-link" href={`/blog/${previousPost.id}`}>
-							&#8592;&nbsp;{previousPost.data.title}
-						</a>
-					</div>
-				)
-			}
-			{
-				nextPost && (
-					<div class="posts-nav-item posts-nav-item-next">
-						<a class="posts-nav-link" href={`/blog/${nextPost.id}`}>
-							{nextPost.data.title}&nbsp;&#8594;
-						</a>
-					</div>
-				)
-			}
-		</div>
-	</article>
+  <article>
+    <header>
+      <h1>{title}</h1>
+      <div class='post-meta'>
+        <ul class='details'>
+          <li class='detail'>
+            <FormattedDate date={date} />
+          </li>
+          <li class='detail'>{minutesReadNumber} minutes to read</li>
+        </ul>
+        <ul class='tags'>
+          {
+            tags.map((tag) => (
+              <li class='tag'>
+                <a href={`/blog/tags/${tag}`}>{tag}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <figure class='figure'>
+        <Image class='figure-image' src={image} alt={`Post cover: ${alt}`} />
+        <figcaption class='figcaption'>
+          {figcaption}
+        </figcaption>
+      </figure>
+    </header>
+    <Content />
+    <div class='posts-nav'>
+      {
+        previousPost && (
+          <div class='posts-nav-item posts-nav-item-prev'>
+            <a class='posts-nav-link' href={`/blog/${previousPost.id}`}>
+              &#8592;&nbsp;{previousPost.data.title}
+            </a>
+          </div>
+        )
+      }
+      {
+        nextPost && (
+          <div class='posts-nav-item posts-nav-item-next'>
+            <a class='posts-nav-link' href={`/blog/${nextPost.id}`}>
+              {nextPost.data.title}&nbsp;&#8594;
+            </a>
+          </div>
+        )
+      }
+    </div>
+  </article>
 </Default>
 
 <style>
-	.list {
-		display: flex;
-		flex-wrap: wrap;
-		font-family: var(--font-family-sans-serif-condensed);
-		color: var(--color-gray-dark);
-		list-style: none;
-		padding: 0;
-		gap: 1rem;
-		row-gap: 0;
-	}
+  .post-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 
-	.list-item {
-		position: relative;
-	}
+  .details {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: var(--font-family-sans-serif-condensed);
+    color: var(--color-gray-dark);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 1rem;
+    row-gap: 0;
+  }
 
-	.list-item::after {
-		content: '·';
-		position: absolute;
-		right: -0.5rem;
-		top: 0;
-		transform: translate(50%, 0);
-	}
+  .detail {
+    position: relative;
+  }
 
-	.list-item:last-child::after {
-		content: '';
-	}
+  .detail::after {
+    content: '·';
+    position: absolute;
+    right: -0.5rem;
+    top: 0;
+    transform: translate(50%, 0);
+  }
 
-	.figure {
-		position: relative;
-	}
+  .detail:last-child::after {
+    content: '';
+  }
 
-	.figure-image {
-		aspect-ratio: 16 / 9;
-	}
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: var(--font-family-sans-serif-condensed);
+    font-size: var(--font-size-medium);
+    font-weight: bold;
+    color: var(--color-white);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 1rem;
+    row-gap: 0;
+  }
 
-	.figcaption {
-		position: absolute;
-		bottom: 1rem;
-		left: 1rem;
-		padding: 0.1rem 0.4rem;
-		font-family: var(--font-family-sans-serif-condensed);
-		font-size: var(--font-size-medium);
-		color: var(--color-white);
-		background-color: rgba(var(--color-black-rgba), 0.5);
-	}
+  .tag {
+    background-color: var(--color-primary);
+    display: block;
+    padding: 0.2rem 0.4rem;
+  }
 
-	.posts-nav {
-		margin-bottom: 2rem;
-		font-family: var(--font-family-sans-serif-condensed);
-	}
+  .tag a {
+    text-decoration: none;
+  }
 
-	.posts-nav::after {
-		content: '';
-		display: table;
-		clear: both;
-	}
+  .tag a:hover {
+    color: var(--color-white);
+  }
 
-	.posts-nav-item {
-		width: 50%;
-	}
+  .figure {
+    position: relative;
+  }
 
-	.posts-nav-item-prev {
-		float: left;
-	}
+  .figure-image {
+    aspect-ratio: 16 / 9;
+  }
 
-	.posts-nav-item-next {
-		float: right;
-		text-align: right;
-	}
+  .figcaption {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    padding: 0.1rem 0.4rem;
+    font-family: var(--font-family-sans-serif-condensed);
+    font-size: var(--font-size-medium);
+    color: var(--color-white);
+    background-color: rgba(var(--color-black-rgba), 0.5);
+  }
 
-	.posts-nav-link {
-		text-decoration: none;
-	}
+  .posts-nav {
+    margin-bottom: 2rem;
+    font-family: var(--font-family-sans-serif-condensed);
+  }
+
+  .posts-nav::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  .posts-nav-item {
+    width: 50%;
+  }
+
+  .posts-nav-item-prev {
+    float: left;
+  }
+
+  .posts-nav-item-next {
+    float: right;
+    text-align: right;
+  }
+
+  .posts-nav-link {
+    text-decoration: none;
+  }
 </style>

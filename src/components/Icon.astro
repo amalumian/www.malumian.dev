@@ -1,13 +1,25 @@
 ---
 type Props = {
-	name: string;
-	width?: string;
-	height?: string;
+  name: string;
+  width?: string;
+  height?: string;
+  block?: boolean;
 };
 
-const { name, width = '3rem', height = '3rem' } = Astro.props;
+const {name, width = '2rem', height = '2rem', block = false} = Astro.props;
 ---
 
-<svg width={width} height={height} aria-hidden="true">
-	<use xlink:href={`#${name}`}></use>
+<svg
+  width={width}
+  height={height}
+  aria-hidden='true'
+  class={block ? 'block' : ''}
+>
+  <use xlink:href={`#${name}`}></use>
 </svg>
+
+<style>
+  .block {
+    display: block;
+  }
+</style>

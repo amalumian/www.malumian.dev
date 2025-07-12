@@ -1,55 +1,56 @@
 ---
-import { Image } from 'astro:assets';
+import {Image} from 'astro:assets';
 
 import Default from '@/layouts/Default.astro';
-import AboutImageWide from '@/assets/about/arthur-malumian-wide.webp';
-import AboutImage from '@/assets/about/arthur-malumian.webp';
-import { PAGES_METADATA } from '@/consts';
+import AboutImageWide from '@/assets/arthur-malumian-wide.webp';
+import AboutImage from '@/assets/arthur-malumian.webp';
+import {PAGES_METADATA} from '@/consts';
 
-const { title, description } = PAGES_METADATA.home;
+const {title, description} = PAGES_METADATA.home;
 ---
 
 <Default title={title} description={description} image={AboutImageWide}>
-	<section>
-		<h1>{title}</h1>
-		<Image class="photo" src={AboutImage} alt="Arthur Malumian" />
-		<p>I am Arthur Malumian (рус. Арту́р Малумя́н), a programmer based in Novosibirsk, Russia.</p>
-		<p>
-			I currently work as a <strong><em>Front End Developer</em></strong>. You can view my <a
-				href="/pdf/resume.pdf">resume</a
-			> for more information.
-		</p>
-		<p>
-			I am a <strong><em>Vim</em></strong> evangelist — by the way, Vim is the best text editor in the
-			world. My
-			<a href="https://github.com/amalumian/dotfiles">dotfiles</a>
-			can be found on GitHub.
-		</p>
-
-		<p>
-			Fiction and art films are a big part of my life. I can't imagine myself without them. I also
-			love video games, but I don't have as much time to play now as I did when I was a teenager. I
-			like to organize everything that can be organized, so you can check out my profiles on
-			<a href="https://www.goodreads.com/amalumian">Goodreads</a>,
-			<a href="https://www.imdb.com/user/ur107408671/">IMDb</a>, and
-			<a href="https://www.ign.com/playlist/amalumian">IGN</a>. Additionally, you may enjoy
-			listening to my public playlists on
-			<a href="https://open.spotify.com/user/31ayjsv2gsjfbsntntse4bzsiqly?si=525484dde53e45dc"
-				>Spotify</a
-			>.
-		</p>
-		<p>
-			If you have any questions, please do not hesitate to contact me via
-			<a href="mailto:arthurmalumian@gmail.com">email</a>.
-		</p>
-	</section>
+  <section>
+    <h1>Arthur Malumian</h1>
+    <Image class='photo' src={AboutImage} alt='Arthur Malumian' />
+    <p>
+      I am Arthur Malumian (рус. Арту́р Малумя́н), a programmer based in
+      Novosibirsk, Russia.
+    </p>
+    <p>
+      I currently work as a <strong><em>Front End Developer</em></strong>. You
+      can view my <a href='/pdf/resume.pdf'>resume</a> for more information.
+    </p>
+    <p>
+      I am a <strong><em>Vim</em></strong> evangelist — by the way, Vim is the best
+      text editor in the world. My
+      <a href='https://github.com/amalumian/dotfiles'>dotfiles</a>
+      can be found on GitHub.
+    </p>
+    <p>
+      I like to organize everything that can be organized, so you can check out
+      my profiles on
+      <a href='https://www.goodreads.com/amalumian'>Goodreads</a>,
+      <a href='https://www.imdb.com/user/ur107408671/'>IMDb</a>, and
+      <a href='https://www.ign.com/playlist/amalumian'>IGN</a>. Additionally,
+      you may enjoy listening to my public playlists on
+      <a
+        href='https://open.spotify.com/user/31ayjsv2gsjfbsntntse4bzsiqly?si=525484dde53e45dc'
+        >Spotify</a
+      >.
+    </p>
+    <p>
+      If you have any questions, please do not hesitate to contact me via
+      <a href='mailto:arthurmalumian@gmail.com'>email</a>.
+    </p>
+  </section>
 </Default>
 
 <style>
-	.photo {
-		margin: 0 0 1rem 1rem;
-		float: right;
-		width: 33%;
-		aspect-ratio: 9 / 16;
-	}
+  .photo {
+    margin: 0 0 1rem 1rem;
+    float: right;
+    width: 33%;
+    aspect-ratio: 9 / 16;
+  }
 </style>
