@@ -14,7 +14,7 @@ export const PAGES_METADATA = {
   tags: {
     title: 'Tags',
     description:
-      "This is the blog of Arthur Malumian, a programmer who posts about software development and more. He shares about the books he's reading, the movies he's watching, and the trips he's taking.",
+      "This page provides an overview of Arthur Malumian's tags used in the blog",
   },
   projects: {
     title: 'Projects',
