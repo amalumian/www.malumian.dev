@@ -131,7 +131,13 @@ const {title, description, date, image = FallbackImage} = Astro.props;
 
 <meta
   property='og:type'
-  content={Astro.url.pathname.includes('/blog/') ? 'article' : 'website'}
+  content={
+    Astro.url.pathname.startsWith('/blog/') && 
+    !Astro.url.pathname.startsWith('/blog/tags/') && 
+    Astro.url.pathname !== '/blog/' 
+      ? 'article' 
+      : 'website'
+  }
 />
 <meta property='og:url' content={Astro.url} />
 <meta property='og:title' content={`${title} | ${SITE_TITLE}`} />

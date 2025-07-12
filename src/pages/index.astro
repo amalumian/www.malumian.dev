@@ -2,17 +2,17 @@
 import {Image} from 'astro:assets';
 
 import Default from '@/layouts/Default.astro';
-import AboutImageWide from '@/assets/arthur-malumian-wide.webp';
-import AboutImage from '@/assets/arthur-malumian.webp';
+import HomeImageWide from '@/assets/arthur-malumian-wide.webp';
+import HomeImage from '@/assets/arthur-malumian.webp';
 import {PAGES_METADATA} from '@/consts';
 
 const {title, description} = PAGES_METADATA.home;
 ---
 
-<Default title={title} description={description} image={AboutImageWide}>
+<Default title={title} description={description} image={HomeImageWide}>
   <section>
     <h1>Arthur Malumian</h1>
-    <Image class='photo' src={AboutImage} alt='Arthur Malumian' />
+    <Image class='photo' src={HomeImage} alt='Arthur Malumian' />
     <p>
       I am Arthur Malumian (рус. Арту́р Малумя́н), a programmer based in
       Novosibirsk, Russia.

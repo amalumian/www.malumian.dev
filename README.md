@@ -1,5 +1,5 @@
-# Arthur Malumian's Blog
+# Arthur Malumian's Website
 
 [![Deploy](https://github.com/malumian/www/actions/workflows/deploy.yml/badge.svg)](https://github.com/malumian/www/actions/workflows/deploy.yml)
 
-This is the blog of Arthur Malumian, a programmer who posts about software development and more. He shares about the books he’s reading, the movies he’s watching, and the trips he’s taking.
+Arthur Malumian is a programmer who loves web technologies. He works as a Front End Developer and writes posts on his blog.

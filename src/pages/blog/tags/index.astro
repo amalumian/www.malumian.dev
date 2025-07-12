@@ -3,6 +3,7 @@ import {getCollection} from 'astro:content';
 
 import Default from '@/layouts/Default.astro';
 import {PAGES_METADATA} from '@/consts';
+import TagsImage from '@/assets/blog/tags/tags-page.png';
 
 const allPosts = (await getCollection('blog')).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
@@ -20,7 +21,7 @@ const sortedTags = Object.entries(tagCounts).sort(([a], [b]) =>
 const {title, description} = PAGES_METADATA.tags;
 ---
 
-<Default title={title} description={description}>
+<Default title={title} description={description} image={TagsImage}>
   <section>
     <h1>{title}</h1>
     <p>This page provides an overview of the tags used in the blog:</p>
