@@ -1,38 +1,38 @@
 *,
 *::after,
 *::before {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-	font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-	margin: 0;
-	font-family: var(--font-family-sans-serif);
-	line-height: var(--line-height-default);
-	font-size: var(--font-size-default);
-	color: var(--color-black);
-	text-align: left;
-	word-wrap: break-word;
-	overflow-wrap: break-word;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  font-family: var(--font-family-sans-serif);
+  line-height: var(--line-height-default);
+  font-size: var(--font-size-default);
+  color: var(--color-black);
+  text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-white);
 }
 
 main {
-	flex: 1;
-	display: flex;
-	flex-direction: column;
-	margin: 0 auto;
-	padding: 0 2rem;
-	max-width: 760px;
-	width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0 2rem;
+  max-width: 760px;
+  width: 100%;
 }
 
 h1,
@@ -41,155 +41,153 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 2rem 0 0 0;
-	line-height: 1.2;
-	font-family: var(--font-family-sans-serif-condensed);
+  margin: 2rem 0 0 0;
+  line-height: 1.2;
+  font-family: var(--font-family-sans-serif-condensed);
 }
 h1 {
-	font-size: var(--font-size-heading-1);
-	text-transform: uppercase;
+  font-size: var(--font-size-heading-1);
+  text-transform: uppercase;
 }
 h2 {
-	font-size: var(--font-size-heading-2);
+  font-size: var(--font-size-heading-2);
 }
 h3 {
-	font-size: var(--font-size-heading-3);
+  font-size: var(--font-size-heading-3);
 }
 h4 {
-	font-size: var(--font-size-heading-4);
+  font-size: var(--font-size-heading-4);
 }
 
 strong,
 b {
-	font-weight: 700;
+  font-weight: 700;
 }
 strong > em {
-	color: var(--color-primary);
-	font-weight: bold;
-	font-style: normal;
+  color: var(--color-primary);
+  font-weight: bold;
+  font-style: normal;
 }
 
 a {
-	color: inherit;
-	text-decoration-style: solid;
-	text-decoration-line: underline;
-	text-decoration-skip-ink: auto;
-	text-decoration-thickness: auto;
-	text-underline-offset: 0.1rem;
-	text-underline-position: from-font;
+  color: inherit;
+  text-decoration-style: solid;
+  text-decoration-line: underline;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: auto;
+  text-underline-offset: 0.1rem;
+  text-underline-position: from-font;
 }
 a:hover {
-	color: var(--color-primary);
+  color: var(--color-primary);
 }
 a:active {
-	color: var(--color-primary-dark);
+  color: var(--color-primary-dark);
 }
 a svg:hover {
-	fill: var(--color-primary);
+  fill: var(--color-primary);
 }
 a svg:active {
-	fill: var(--color-primary-dark);
+  fill: var(--color-primary-dark);
 }
 sup a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 p {
-	margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 ul {
-	list-style: square;
+  list-style: square;
 }
 
 textarea {
-	width: 100%;
-	font-size: var(--font-size-default);
+  width: 100%;
+  font-size: var(--font-size-default);
 }
 input {
-	font-size: 16px;
+  font-size: 16px;
 }
 
 table {
-	width: 100%;
+  width: 100%;
 }
 
 img {
-	display: block;
-	width: 100%;
-	max-width: 100%;
-	height: auto;
-	object-fit: cover;
-	object-position: center;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
 }
 
 figure {
-	margin: 2rem 0;
+  margin: 2rem 0;
 }
 
 svg {
-	display: block;
-	fill: currentColor;
+  fill: currentColor;
 }
 
 video {
-	display: block;
+  display: block;
 }
 
 code {
-	background-color: var(--color-gray-light);
-	font-family: 'JetBrains Mono', monospace;
+  background-color: var(--color-gray-light);
+  font-family: 'JetBrains Mono', monospace;
 }
 pre {
-	padding: 1.5rem;
-	font-family: 'JetBrains Mono', monospace;
+  padding: 1.5rem;
+  font-family: 'JetBrains Mono', monospace;
 }
 pre > code {
-	all: unset;
+  all: unset;
 }
 
 blockquote {
-	border-left: 0.4rem solid var(--color-primary);
-	padding: 0 0 0 2rem;
-	margin: 0;
-	font-size: var(--font-size-default);
+  border-left: 0.4rem solid var(--color-primary);
+  padding: 0 0 0 2rem;
+  margin: 0;
+  font-size: var(--font-size-default);
 }
 
 hr {
-	border: none;
-	border-top: 1px solid rgb(var(--gray-light));
+  border: none;
+  border-top: 1px solid rgb(var(--gray-light));
 }
 
 @media (max-width: 760px) {
-	html {
-		font-size: 50%;
-	}
+  html {
+    font-size: 50%;
+  }
 }
 
 /* SR ONLY */
 .sr-only {
-	border: 0;
-	padding: 0;
-	margin: 0;
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
-	/* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
-	clip: rect(1px 1px 1px 1px);
-	/* maybe deprecated but we need to support legacy browsers */
-	clip: rect(1px, 1px, 1px, 1px);
-	/* modern browsers, clip-path works inwards from each corner */
-	clip-path: inset(50%);
-	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
-	white-space: nowrap;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
+  clip: rect(1px 1px 1px 1px);
+  /* maybe deprecated but we need to support legacy browsers */
+  clip: rect(1px, 1px, 1px, 1px);
+  /* modern browsers, clip-path works inwards from each corner */
+  clip-path: inset(50%);
+  /* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
+  white-space: nowrap;
 }
 
 *:focus {
-	outline: none;
+  outline: none;
 }
 
 *:focus-visible {
-	outline: 0.2rem dashed var(--color-primary);
-	outline-offset: 0.5rem;
+  outline: 0.2rem solid var(--color-primary-light);
 }
