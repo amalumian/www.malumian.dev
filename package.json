@@ -13,9 +13,9 @@
     "format": "prettier --write src"
   },
   "lint-staged": {
-    "**/*.{astro, ts, css}": [
-      "npx prettier --write src",
-      "npx eslint --fix src"
+    "**/*.{astro,ts,css}": [
+      "prettier --write",
+      "eslint --fix"
     ]
   },
   "dependencies": {
