@@ -2,7 +2,7 @@ export const SITE_TITLE = 'Arthur Malumian';
 
 export const PAGES_METADATA = {
   home: {
-    title: 'Home',
+    title: '',
     description:
       'This is personal website of Arthur Malumian, a programmer who loves web technologies. He works as a Front End Developer and writes posts on his blog.',
   },
