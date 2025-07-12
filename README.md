@@ -1,4 +1,4 @@
-# Arthur Malumian's Blog
+# Arthur Malumian's Website
 
 [![Deploy](https://github.com/malumian/www/actions/workflows/deploy.yml/badge.svg)](https://github.com/malumian/www/actions/workflows/deploy.yml)
 
