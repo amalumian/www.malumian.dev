@@ -8,9 +8,9 @@ import {remarkReadingTime} from './plugins/remark-reading-time.mjs';
 export default defineConfig({
   site: 'https://www.malumian.dev',
   redirects: {
-    '/about': '/',
+    '/about/': '/',
   },
-	prefetch: true,
+  prefetch: true,
   integrations: [
     mdx(),
     sitemap({

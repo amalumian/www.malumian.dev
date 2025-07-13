@@ -29,7 +29,7 @@ const {title, description} = PAGES_METADATA.tags;
       {
         sortedTags.map(([tag]) => (
           <li>
-            <a href={`/blog/tags/${tag}`}>
+            <a href={`/blog/tags/${tag}/`}>
               {tag} ({tagCounts[tag]})
             </a>
           </li>

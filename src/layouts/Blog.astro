@@ -35,7 +35,7 @@ const postsToRender = filteredPosts ?? allPosts;
         {allPosts.length === 1 ? 'post' : 'posts'}
       </div>
       <select id='tags-select'>
-        <option value='all' selected={selectedTag === undefined}>—</option>
+        <option value='' selected={selectedTag === undefined}>—</option>
         {
           tags.map((tag) => (
             <option value={tag} selected={tag === selectedTag}>
@@ -51,7 +51,7 @@ const postsToRender = filteredPosts ?? allPosts;
           const {image, alt} = post.data.imageData;
           return (
             <article class='post'>
-              <a class='post-link' href={`/blog/${post.id}`}>
+              <a class='post-link' href={`/blog/${post.id}/`}>
                 <Image
                   class='post-image'
                   src={image}
@@ -179,10 +179,10 @@ const postsToRender = filteredPosts ?? allPosts;
     tagsSelectElement.addEventListener('change', (event) => {
       const target = event.target as HTMLSelectElement;
       const value = target.value;
-      if (value === 'all') {
-        window.location.href = '/blog';
+      if (value === '') {
+        window.location.href = '/blog/';
       } else {
-        window.location.href = `/blog/tags/${value}`;
+        window.location.href = `/blog/tags/${value}/`;
       }
     });
   }

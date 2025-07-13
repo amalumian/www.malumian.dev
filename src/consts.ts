@@ -39,15 +39,15 @@ export const ROUTES = [
   },
   {
     name: 'Blog',
-    link: '/blog',
+    link: '/blog/',
   },
   {
     name: 'Projects',
-    link: '/projects',
+    link: '/projects/',
   },
   {
     name: 'Setup',
-    link: '/setup',
+    link: '/setup/',
   },
 ];
 

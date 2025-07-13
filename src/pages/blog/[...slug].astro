@@ -51,7 +51,7 @@ const sortedTags = tags.sort((a, b) => a.localeCompare(b));
           {
             sortedTags.map((tag) => (
               <li class='tag'>
-                <a href={`/blog/tags/${tag}`}>{tag}</a>
+                <a href={`/blog/tags/${tag}/`}>{tag}</a>
               </li>
             ))
           }
@@ -69,7 +69,7 @@ const sortedTags = tags.sort((a, b) => a.localeCompare(b));
       {
         previousPost && (
           <div class='posts-nav-item posts-nav-item-prev'>
-            <a class='posts-nav-link' href={`/blog/${previousPost.id}`}>
+            <a class='posts-nav-link' href={`/blog/${previousPost.id}/`}>
               &#8592;&nbsp;{previousPost.data.title}
             </a>
           </div>
@@ -78,7 +78,7 @@ const sortedTags = tags.sort((a, b) => a.localeCompare(b));
       {
         nextPost && (
           <div class='posts-nav-item posts-nav-item-next'>
-            <a class='posts-nav-link' href={`/blog/${nextPost.id}`}>
+            <a class='posts-nav-link' href={`/blog/${nextPost.id}/`}>
               {nextPost.data.title}&nbsp;&#8594;
             </a>
           </div>
