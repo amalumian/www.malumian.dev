@@ -98,6 +98,10 @@ p {
   margin-bottom: 1em;
 }
 
+article p {
+  hyphens: auto;
+}
+
 ul {
   list-style: square;
 }
