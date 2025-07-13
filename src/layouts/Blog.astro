@@ -58,6 +58,13 @@ const postsToRender = filteredPosts ?? allPosts;
                 <div class='post-details'>
                   <h2 class='post-heading'>{post.data.title}</h2>
                   <FormattedDate date={post.data.date} />
+                  <ul class='tags'>
+                    {post.data.tags.map((tag) => (
+                      <li class='tag'>
+                        <span>{tag}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </a>
             </article>
@@ -104,6 +111,7 @@ const postsToRender = filteredPosts ?? allPosts;
   }
 
   .post {
+    position: relative;
     flex-basis: calc(50% - 1rem);
   }
 
@@ -120,6 +128,30 @@ const postsToRender = filteredPosts ?? allPosts;
 
   .post-details {
     font-family: var(--font-family-sans-serif-condensed);
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: var(--font-family-sans-serif-condensed);
+    font-size: var(--font-size-medium);
+    font-weight: bold;
+    color: var(--color-white);
+    list-style: none;
+    padding: 0.4rem 0.4rem;
+    background-color: rgba(var(--color-black-rgba), 0.5);
+    margin: 0;
+    gap: 0.4rem;
+    row-gap: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .tag {
+    background-color: var(--color-primary);
+    display: block;
+    padding: 0.1rem 0.4rem;
   }
 
   .post-heading {
