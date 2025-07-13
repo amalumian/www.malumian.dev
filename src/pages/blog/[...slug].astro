@@ -33,6 +33,7 @@ const {
   tags,
 } = post.data;
 const minutesReadNumber = parseInt(minutesRead, 10);
+const sortedTags = tags.sort((a, b) => a.localeCompare(b));
 ---
 
 <Default title={title} description={description} date={date} image={image}>
@@ -48,7 +49,7 @@ const minutesReadNumber = parseInt(minutesRead, 10);
         </ul>
         <ul class='tags'>
           {
-            tags.map((tag) => (
+            sortedTags.map((tag) => (
               <li class='tag'>
                 <a href={`/blog/tags/${tag}`}>{tag}</a>
               </li>

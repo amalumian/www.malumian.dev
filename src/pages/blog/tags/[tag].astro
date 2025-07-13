@@ -6,7 +6,9 @@ import {PAGES_METADATA} from '@/consts';
 import BlogImage from '@/assets/blog/blog-page.png';
 
 export async function getStaticPaths() {
-  const allPosts = await getCollection('blog');
+  const allPosts = (await getCollection('blog')).sort(
+    (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+  );
   const uniqueTags = [
     ...new Set(allPosts.map((post) => post.data.tags).flat()),
   ];
