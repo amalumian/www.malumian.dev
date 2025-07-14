@@ -45,9 +45,13 @@ const {selectedItem, items, defaultItem, id = 'custom-select'} = Astro.props;
       {
         selectedItem && (
           <li class='dropdown-item' role='option' aria-selected='false'>
-            <a class='dropdown-item-link' href={defaultItem.url} tabindex='-1'>
+            <button
+              class='dropdown-item-button'
+              data-url={defaultItem.url}
+              tabindex='-1'
+            >
               {defaultItem.label}
-            </a>
+            </button>
           </li>
         )
       }
@@ -56,9 +60,13 @@ const {selectedItem, items, defaultItem, id = 'custom-select'} = Astro.props;
           .filter((item) => item.label !== selectedItem)
           .map((item) => (
             <li class='dropdown-item' role='option' aria-selected='false'>
-              <a class='dropdown-item-link' href={item.url} tabindex='-1'>
+              <button
+                class='dropdown-item-button'
+                data-url={item.url}
+                tabindex='-1'
+              >
                 {item.label}
-              </a>
+              </button>
             </li>
           ))
       }
@@ -128,20 +136,28 @@ const {selectedItem, items, defaultItem, id = 'custom-select'} = Astro.props;
     color: var(--color-black);
   }
 
-  .dropdown-item-link {
+  .dropdown-item-button {
     display: block;
+    width: 100%;
     padding: 0.5rem 1rem;
     text-decoration: none;
+    background: transparent;
+    border: none;
+    font-family: var(--font-family-sans-serif-condensed);
+    font-size: var(--font-size-medium);
+    color: var(--color-black);
+    cursor: pointer;
+    text-align: left;
   }
 
-  .dropdown-item-link:hover,
-  .dropdown-item-link:focus {
+  .dropdown-item-button:hover,
+  .dropdown-item-button:focus {
     color: var(--color-black);
     background-color: var(--color-gray-light);
     outline: none;
   }
 
-  .dropdown-item[aria-selected='true'] .dropdown-item-link {
+  .dropdown-item[aria-selected='true'] .dropdown-item-button {
     background-color: var(--color-gray-light);
   }
 </style>
@@ -170,8 +186,8 @@ const {selectedItem, items, defaultItem, id = 'custom-select'} = Astro.props;
 
     const disableAllTabIndexes = () => {
       options.forEach((option) => {
-        const link = option.querySelector('a');
-        if (link) link.tabIndex = -1;
+        const button = option.querySelector('button');
+        if (button) button.tabIndex = -1;
       });
     };
 
@@ -194,9 +210,9 @@ const {selectedItem, items, defaultItem, id = 'custom-select'} = Astro.props;
       if (options.length > 0) {
         focusedIndex = 0;
         options[0].setAttribute('aria-selected', 'true');
-        const firstLink = options[0].querySelector('a');
-        if (firstLink) {
-          firstLink.focus();
+        const firstButton = options[0].querySelector('button');
+        if (firstButton) {
+          firstButton.focus();
         }
       }
     };
@@ -212,9 +228,9 @@ const {selectedItem, items, defaultItem, id = 'custom-select'} = Astro.props;
 
       focusedIndex = index;
       options[index].setAttribute('aria-selected', 'true');
-      const newLink = options[index].querySelector('a');
-      if (newLink) {
-        newLink.focus();
+      const newButton = options[index].querySelector('button');
+      if (newButton) {
+        newButton.focus();
       }
     };
 
@@ -293,8 +309,8 @@ const {selectedItem, items, defaultItem, id = 'custom-select'} = Astro.props;
         case ' ':
           event.preventDefault();
           if (focusedIndex >= 0 && focusedIndex < options.length) {
-            const link = options[focusedIndex].querySelector('a');
-            if (link) link.click();
+            const button = options[focusedIndex].querySelector('button');
+            if (button) button.click();
           }
           break;
         case 'Escape':
@@ -313,7 +329,7 @@ const {selectedItem, items, defaultItem, id = 'custom-select'} = Astro.props;
 
     dropdown.addEventListener('focusin', (event: Event) => {
       const target = event.target as HTMLElement;
-      if (target.tagName === 'A') {
+      if (target.tagName === 'BUTTON') {
         const option = target.closest('[role="option"]');
         if (option) {
           const index = Array.from(options).indexOf(option);
@@ -348,6 +364,19 @@ const {selectedItem, items, defaultItem, id = 'custom-select'} = Astro.props;
         !selectContainer.contains(relatedTarget as HTMLElement)
       ) {
         closeDropdown();
+      }
+    });
+
+    dropdown.addEventListener('click', (event: Event) => {
+      const target = event.target as HTMLElement;
+      if (
+        target.tagName === 'BUTTON' &&
+        target.classList.contains('dropdown-item-button')
+      ) {
+        const url = target.getAttribute('data-url');
+        if (url) {
+          window.location.href = url;
+        }
       }
     });
   }
