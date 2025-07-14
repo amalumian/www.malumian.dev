@@ -100,10 +100,16 @@ const {selectedItem, items, defaultItem, id = 'custom-select'} = Astro.props;
     font-family: var(--font-family-sans-serif-condensed);
     font-size: var(--font-size-medium);
     color: var(--color-black);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
   }
 
   .selected-item-button:hover {
     background-color: var(--color-gray-light);
+  }
+
+  .selected-item-button:active {
+    background-color: var(--color-gray);
   }
 
   .selected-item-button:focus-visible {
@@ -148,6 +154,8 @@ const {selectedItem, items, defaultItem, id = 'custom-select'} = Astro.props;
     color: var(--color-black);
     cursor: pointer;
     text-align: left;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
   }
 
   .dropdown-item-button:hover,
@@ -155,6 +163,10 @@ const {selectedItem, items, defaultItem, id = 'custom-select'} = Astro.props;
     color: var(--color-black);
     background-color: var(--color-gray-light);
     outline: none;
+  }
+
+  .dropdown-item-button:active {
+    background-color: var(--color-gray) !important;
   }
 
   .dropdown-item[aria-selected='true'] .dropdown-item-button {
