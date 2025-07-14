@@ -5,6 +5,7 @@ import {Image} from 'astro:assets';
 
 import Default from '@/layouts/Default.astro';
 import FormattedDate from '@/components/FormattedDate.astro';
+import Select from '@/components/Select.astro';
 
 type BlogPost = CollectionEntry<'blog'>;
 
@@ -24,6 +25,11 @@ const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())].sort(
   (a, b) => a.localeCompare(b),
 );
 const postsToRender = filteredPosts ?? allPosts;
+const selectItems = tags.map((tag) => ({
+  label: tag,
+  url: `/blog/tags/${tag}/`,
+}));
+const defaultItem = {label: '—', url: '/blog/'};
 ---
 
 <Default title={title} description={description} image={image}>
@@ -34,16 +40,11 @@ const postsToRender = filteredPosts ?? allPosts;
         Showing {postsToRender.length} of {allPosts.length}
         {allPosts.length === 1 ? 'post' : 'posts'}
       </div>
-      <select id='tags-select'>
-        <option value='' selected={selectedTag === undefined}>—</option>
-        {
-          tags.map((tag) => (
-            <option value={tag} selected={tag === selectedTag}>
-              {tag}
-            </option>
-          ))
-        }
-      </select>
+      <Select
+        items={selectItems}
+        selectedItem={selectedTag}
+        defaultItem={defaultItem}
+      />
     </div>
     <div class='posts-list'>
       {
@@ -93,14 +94,6 @@ const postsToRender = filteredPosts ?? allPosts;
   .posts-count {
     margin: 0;
     line-height: 1;
-  }
-
-  #tags-select {
-    display: block;
-    margin: 0;
-    border-radius: 0;
-    font-family: var(--font-family-sans-serif-condensed);
-    font-size: var(--font-size-medium);
   }
 
   .posts-list {
@@ -172,18 +165,3 @@ const postsToRender = filteredPosts ?? allPosts;
     }
   }
 </style>
-
-<script>
-  const tagsSelectElement = document.getElementById('tags-select');
-  if (tagsSelectElement) {
-    tagsSelectElement.addEventListener('change', (event) => {
-      const target = event.target as HTMLSelectElement;
-      const value = target.value;
-      if (value === '') {
-        window.location.href = '/blog/';
-      } else {
-        window.location.href = `/blog/tags/${value}/`;
-      }
-    });
-  }
-</script>
