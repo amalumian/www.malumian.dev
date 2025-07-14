@@ -80,11 +80,11 @@ const {selectedItem, items, defaultItem, id = 'custom-select'} = Astro.props;
 <style>
   .select {
     position: relative;
+    width: 14rem;
   }
 
   .selected-item {
     border: 0.1rem solid var(--color-black);
-    width: 14rem;
   }
 
   .selected-item-button {
@@ -137,9 +137,6 @@ const {selectedItem, items, defaultItem, id = 'custom-select'} = Astro.props;
   }
 
   .dropdown-item {
-    font-family: var(--font-family-sans-serif-condensed);
-    font-size: var(--font-size-medium);
-    color: var(--color-black);
   }
 
   .dropdown-item-button {
