@@ -12,16 +12,31 @@ interface Props {
     url: string;
   };
   id?: string;
+  label?: string;
 }
-const {selectedItem, items, defaultItem, id = 'custom-select'} = Astro.props;
+const {
+  selectedItem,
+  items,
+  defaultItem,
+  id = 'custom-select',
+  label,
+} = Astro.props;
 ---
 
+{
+  label && (
+    <label id={`${id}-main-label`} for={`${id}-button`} class='sr-only'>
+      {label}
+    </label>
+  )
+}
 <div
   class='select'
   role='combobox'
   aria-expanded='false'
   aria-haspopup='listbox'
   aria-controls={`${id}-listbox`}
+  aria-labelledby={`${id}-main-label`}
 >
   <div class='selected-item'>
     <button
@@ -100,7 +115,6 @@ const {selectedItem, items, defaultItem, id = 'custom-select'} = Astro.props;
     font-family: var(--font-family-sans-serif-condensed);
     font-size: var(--font-size-medium);
     color: var(--color-black);
-    -webkit-touch-callout: none;
   }
 
   .selected-item-button:hover {
@@ -150,7 +164,6 @@ const {selectedItem, items, defaultItem, id = 'custom-select'} = Astro.props;
     color: var(--color-black);
     cursor: pointer;
     text-align: left;
-    -webkit-touch-callout: none;
   }
 
   .dropdown-item-button:hover,
