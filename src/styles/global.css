@@ -194,4 +194,5 @@ hr {
 
 *:focus-visible {
   outline: 0.2rem solid var(--color-primary-light);
+  outline-offset: 0;
 }
