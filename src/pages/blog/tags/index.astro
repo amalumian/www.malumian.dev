@@ -14,8 +14,8 @@ allPosts.forEach((post) => {
     tagCounts[tag] = (tagCounts[tag] || 0) + 1;
   });
 });
-const sortedTags = Object.entries(tagCounts).sort(([a], [b]) =>
-  a.localeCompare(b),
+const sortedTags = Object.entries(tagCounts).sort(
+  ([a], [b]) => tagCounts[b] - tagCounts[a],
 );
 
 const {title, description} = PAGES_METADATA.tags;
