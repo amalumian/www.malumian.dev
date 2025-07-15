@@ -76,11 +76,6 @@ strong,
 b {
   font-weight: 700;
 }
-strong > em {
-  color: var(--color-primary);
-  font-weight: bold;
-  font-style: normal;
-}
 
 a {
   color: inherit;
