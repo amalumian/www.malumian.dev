@@ -15,14 +15,21 @@ const {title, description} = PAGES_METADATA.setup;
     <p>
       <Image src={DeskImage} alt='Desktop' />
     </p>
-
     <h2>Table of Contents</h2>
     <ul>
-      <li><a href='#technical-gear'>Technical Gear</a></li>
-      <li><a href='#macbook-specification'>MacBook Specification</a></li>
+      <li>
+        <a href='#hardware'>Hardware</a>
+        <ul>
+          <li>
+            <a href='#macbook-specification'>MacBook Specification</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href='#software'>Software</a>
+      </li>
     </ul>
-
-    <h2 id='technical-gear'>Technical Gear</h2>
+    <h2 id='hardware'>Hardware</h2>
     <ul>
       <li><b>Laptop:</b> Apple MacBook Air M1</li>
       <li><b>Mini PC:</b> Apple Mac mini (2018)</li>
@@ -43,13 +50,16 @@ const {title, description} = PAGES_METADATA.setup;
       <li><b>Desk:</b> Ergostol Start 2.0</li>
       <li><b>Cable Management Tray:</b> Ergostol Tao 2.0</li>
     </ul>
-
-    <h2 id='macbook-specification'>MacBook Specification</h2>
+    <h3 id='macbook-specification'>MacBook Specification</h3>
     <ul>
       <li>13.3”</li>
       <li>Apple M1 chip</li>
       <li>16 GB RAM</li>
       <li>512 GB SSD</li>
+    </ul>
+    <h2 id='software'>Software</h2>
+    <ul>
+      <li><a href='https://github.com/amalumian/dotfiles'>dotfiles</a></li>
     </ul>
   </section>
 </Default>
