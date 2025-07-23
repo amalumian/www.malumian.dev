@@ -65,7 +65,7 @@ I also see a certain parallel between law and programming, since lawyers, like p
 
 ## Future
 
-So what's next? I plan to find a permanent job, to get fundamental knowledge that programmers get in universities, to study new technologies, in general to improve my qualification as a specialist.
+So what's next? I plan to find a job in an IT company, to get fundamental knowledge that programmers get in universities, to study new technologies, in general to improve my qualification as a specialist.
 
 That's my story.
 
