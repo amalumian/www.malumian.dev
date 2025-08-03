@@ -99,7 +99,7 @@ const {
   }
 
   .selected-item {
-    border: 0.1rem solid var(--color-black);
+    border: 0.1rem solid var(--color-text);
   }
 
   .selected-item-button {
@@ -114,7 +114,7 @@ const {
     cursor: pointer;
     font-family: var(--font-family-sans-serif-condensed);
     font-size: var(--font-size-medium);
-    color: var(--color-black);
+    color: var(--color-text);
   }
 
   .selected-item-button:hover {
@@ -132,11 +132,11 @@ const {
   .dropdown {
     display: none;
     width: 100%;
-    border: 0.1rem solid var(--color-black);
+    border: 0.1rem solid var(--color-text);
     border-top: none;
     position: absolute;
     z-index: 1;
-    background-color: var(--color-white);
+    background-color: var(--color-background);
   }
 
   .dropdown.open {
@@ -161,14 +161,14 @@ const {
     border: none;
     font-family: var(--font-family-sans-serif-condensed);
     font-size: var(--font-size-medium);
-    color: var(--color-black);
+    color: var(--color-text);
     cursor: pointer;
     text-align: left;
   }
 
   .dropdown-item-button:hover,
   .dropdown-item-button:focus {
-    color: var(--color-black);
+    color: var(--color-text);
     background-color: var(--color-gray-light);
     outline: none;
   }

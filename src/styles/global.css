@@ -1,3 +1,10 @@
+/* @media (prefers-color-scheme: dark) { */
+/*   :root { */
+/*     --color-text: #e6e1e5; */
+/*     --color-background: #121212; */
+/*   } */
+/* } */
+
 *,
 *::after,
 *::before {
@@ -29,13 +36,13 @@ body {
   font-family: var(--font-family-sans-serif);
   line-height: var(--line-height-default);
   font-size: var(--font-size-default);
-  color: var(--color-black);
+  color: var(--color-text);
   text-align: left;
   word-wrap: break-word;
   overflow-wrap: break-word;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--color-white);
+  background-color: var(--color-background);
 }
 
 main {
